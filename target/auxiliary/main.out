@@ -1,0 +1,118 @@
+\BOOKMARK [0][-]{chapter*.6}{Inhaltsverzeichnis}{}% 1
+\BOOKMARK [0][-]{chapter*.7}{Abbildungsverzeichnis}{}% 2
+\BOOKMARK [0][-]{chapter*.8}{Tabellenverzeichnis}{}% 3
+\BOOKMARK [0][-]{chapter*.9}{Codebeispielverzeichnis}{}% 4
+\BOOKMARK [0][-]{chapter*.9}{Abk\374rzungsverzeichnis}{}% 5
+\BOOKMARK [0][-]{chapter.1}{Einleitung}{}% 6
+\BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.2}{Zielsetzung}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.3}{Aufgaben}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.4}{Aufbau der Arbeit}{chapter.1}% 10
+\BOOKMARK [0][-]{chapter.2}{Grundlagen}{}% 11
+\BOOKMARK [1][-]{section.2.1}{Begriffsdefinitionen}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.2}{Technische Grundlagen}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.1}{HTML}{section.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.2}{CSS}{section.2.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.3}{JavaScript}{section.2.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.4}{TypeScript}{section.2.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.5}{Webserver}{section.2.2}% 18
+\BOOKMARK [2][-]{subsection.2.2.6}{URL}{section.2.2}% 19
+\BOOKMARK [2][-]{subsection.2.2.7}{Servlet}{section.2.2}% 20
+\BOOKMARK [2][-]{subsection.2.2.8}{HTTP}{section.2.2}% 21
+\BOOKMARK [2][-]{subsection.2.2.9}{Ajax}{section.2.2}% 22
+\BOOKMARK [2][-]{subsection.2.2.10}{XML und JSON}{section.2.2}% 23
+\BOOKMARK [1][-]{section.2.3}{Fachliche Grundlagen}{chapter.2}% 24
+\BOOKMARK [2][-]{subsection.2.3.1}{Webanwendung}{section.2.3}% 25
+\BOOKMARK [3][-]{subsubsection.2.3.1.1}{Serverseitige Webanwendungen}{subsection.2.3.1}% 26
+\BOOKMARK [3][-]{subsubsection.2.3.1.2}{Clientseitige Webanwendungen}{subsection.2.3.1}% 27
+\BOOKMARK [3][-]{subsubsection.2.3.1.3}{Single-Page-Webanwendung}{subsection.2.3.1}% 28
+\BOOKMARK [2][-]{subsection.2.3.2}{Framework / Bibliothek}{section.2.3}% 29
+\BOOKMARK [2][-]{subsection.2.3.3}{MV*-Architekturmuster}{section.2.3}% 30
+\BOOKMARK [2][-]{subsection.2.3.4}{Content Management System}{section.2.3}% 31
+\BOOKMARK [3][-]{subsubsection.2.3.4.1}{Adobe Experience Manager}{subsection.2.3.4}% 32
+\BOOKMARK [4][-]{paragraph.2.3.4.1.1}{JCR}{subsubsection.2.3.4.1}% 33
+\BOOKMARK [4][-]{paragraph.2.3.4.1.2}{CRX}{subsubsection.2.3.4.1}% 34
+\BOOKMARK [4][-]{paragraph.2.3.4.1.3}{OSGi und Apache Felix}{subsubsection.2.3.4.1}% 35
+\BOOKMARK [4][-]{paragraph.2.3.4.1.4}{Apache Sling}{subsubsection.2.3.4.1}% 36
+\BOOKMARK [4][-]{paragraph.2.3.4.1.5}{Autoren-Bedienoberfl\344che}{subsubsection.2.3.4.1}% 37
+\BOOKMARK [4][-]{paragraph.2.3.4.1.6}{Administrator Bedienoberfl\344che}{subsubsection.2.3.4.1}% 38
+\BOOKMARK [4][-]{paragraph.2.3.4.1.7}{AEM-Anwendung}{subsubsection.2.3.4.1}% 39
+\BOOKMARK [4][-]{paragraph.2.3.4.1.8}{HTL}{subsubsection.2.3.4.1}% 40
+\BOOKMARK [4][-]{paragraph.2.3.4.1.9}{Komponenten}{subsubsection.2.3.4.1}% 41
+\BOOKMARK [4][-]{paragraph.2.3.4.1.10}{Clientlib}{subsubsection.2.3.4.1}% 42
+\BOOKMARK [0][-]{chapter.3}{Webframeworks}{}% 43
+\BOOKMARK [1][-]{section.3.1}{Werkzeuge und Techniken}{chapter.3}% 44
+\BOOKMARK [2][-]{subsection.3.1.1}{Node.js}{section.3.1}% 45
+\BOOKMARK [2][-]{subsection.3.1.2}{Paketverwaltung}{section.3.1}% 46
+\BOOKMARK [2][-]{subsection.3.1.3}{Automatisierungswerkzeuge}{section.3.1}% 47
+\BOOKMARK [2][-]{subsection.3.1.4}{Modularisierung und Verwaltung von Abh\344ngigkeiten}{section.3.1}% 48
+\BOOKMARK [1][-]{section.3.2}{Anforderungen}{chapter.3}% 49
+\BOOKMARK [2][-]{subsection.3.2.1}{Browserunterst\374tzung}{section.3.2}% 50
+\BOOKMARK [2][-]{subsection.3.2.2}{Integration}{section.3.2}% 51
+\BOOKMARK [2][-]{subsection.3.2.3}{Indizierung von Suchmaschinen}{section.3.2}% 52
+\BOOKMARK [3][-]{subsubsection.3.2.3.1}{Funktionsweise einer Suchmaschine}{subsection.3.2.3}% 53
+\BOOKMARK [3][-]{subsubsection.3.2.3.2}{Probleme bei Single-Page-Webanwendungen}{subsection.3.2.3}% 54
+\BOOKMARK [4][-]{paragraph.3.2.3.2.1}{Nachladen mit JavaScript}{subsubsection.3.2.3.2}% 55
+\BOOKMARK [4][-]{paragraph.3.2.3.2.2}{Hyperlinks innerhalb der SPA}{subsubsection.3.2.3.2}% 56
+\BOOKMARK [4][-]{paragraph.3.2.3.2.3}{L\366sung durch die pushState-Funktion}{subsubsection.3.2.3.2}% 57
+\BOOKMARK [2][-]{subsection.3.2.4}{Lizenz}{section.3.2}% 58
+\BOOKMARK [1][-]{section.3.3}{Auswahl \046 Bewertung}{chapter.3}% 59
+\BOOKMARK [2][-]{subsection.3.3.1}{AngularJS}{section.3.3}% 60
+\BOOKMARK [3][-]{subsubsection.3.3.1.1}{Datenbindung}{subsection.3.3.1}% 61
+\BOOKMARK [3][-]{subsubsection.3.3.1.2}{Module}{subsection.3.3.1}% 62
+\BOOKMARK [3][-]{subsubsection.3.3.1.3}{Service}{subsection.3.3.1}% 63
+\BOOKMARK [3][-]{subsubsection.3.3.1.4}{Dependency-Injection}{subsection.3.3.1}% 64
+\BOOKMARK [3][-]{subsubsection.3.3.1.5}{Templates}{subsection.3.3.1}% 65
+\BOOKMARK [3][-]{subsubsection.3.3.1.6}{Direktiven}{subsection.3.3.1}% 66
+\BOOKMARK [3][-]{subsubsection.3.3.1.7}{Scopes}{subsection.3.3.1}% 67
+\BOOKMARK [2][-]{subsection.3.3.2}{AngularJS2}{section.3.3}% 68
+\BOOKMARK [3][-]{subsubsection.3.3.2.1}{Unterschied zu AngularJS}{subsection.3.3.2}% 69
+\BOOKMARK [3][-]{subsubsection.3.3.2.2}{Komponenten}{subsection.3.3.2}% 70
+\BOOKMARK [3][-]{subsubsection.3.3.2.3}{Performance}{subsection.3.3.2}% 71
+\BOOKMARK [3][-]{subsubsection.3.3.2.4}{Datenbindung}{subsection.3.3.2}% 72
+\BOOKMARK [2][-]{subsection.3.3.3}{Aurelia}{section.3.3}% 73
+\BOOKMARK [3][-]{subsubsection.3.3.3.1}{Sprachen}{subsection.3.3.3}% 74
+\BOOKMARK [3][-]{subsubsection.3.3.3.2}{Templates}{subsection.3.3.3}% 75
+\BOOKMARK [3][-]{subsubsection.3.3.3.3}{Dependency Injection}{subsection.3.3.3}% 76
+\BOOKMARK [3][-]{subsubsection.3.3.3.4}{Support}{subsection.3.3.3}% 77
+\BOOKMARK [2][-]{subsection.3.3.4}{React}{section.3.3}% 78
+\BOOKMARK [3][-]{subsubsection.3.3.4.1}{Virtueller DOM}{subsection.3.3.4}% 79
+\BOOKMARK [3][-]{subsubsection.3.3.4.2}{JSX}{subsection.3.3.4}% 80
+\BOOKMARK [2][-]{subsection.3.3.5}{Vergleich}{section.3.3}% 81
+\BOOKMARK [0][-]{chapter.4}{Analyse des Ist-Zustand}{}% 82
+\BOOKMARK [1][-]{section.4.1}{Ziel}{chapter.4}% 83
+\BOOKMARK [1][-]{section.4.2}{Entwicklungsprozess und bestehende Problematiken}{chapter.4}% 84
+\BOOKMARK [2][-]{subsection.4.2.1}{IT-Landschaft der Zielplattform}{section.4.2}% 85
+\BOOKMARK [2][-]{subsection.4.2.2}{Bereitstellen von Web-Ressourcen}{section.4.2}% 86
+\BOOKMARK [2][-]{subsection.4.2.3}{Konflikte mit anderen Skripten}{section.4.2}% 87
+\BOOKMARK [1][-]{section.4.3}{Anforderungen}{chapter.4}% 88
+\BOOKMARK [0][-]{chapter.5}{Integration der Webframeworks in AEM}{}% 89
+\BOOKMARK [1][-]{section.5.1}{Rahmenbedingungen}{chapter.5}% 90
+\BOOKMARK [1][-]{section.5.2}{Zu untersuchende Frameworks}{chapter.5}% 91
+\BOOKMARK [1][-]{section.5.3}{Zu integrierende Webanwendungen}{chapter.5}% 92
+\BOOKMARK [1][-]{section.5.4}{Aufbereiten der Daten}{chapter.5}% 93
+\BOOKMARK [2][-]{subsection.5.4.1}{Minimierung}{section.5.4}% 94
+\BOOKMARK [1][-]{section.5.5}{M\366glichkeiten der Integration}{chapter.5}% 95
+\BOOKMARK [2][-]{subsection.5.5.1}{Direkte Integration in das AEM}{section.5.5}% 96
+\BOOKMARK [3][-]{subsubsection.5.5.1.1}{Verwendung als Clientlib}{subsection.5.5.1}% 97
+\BOOKMARK [4][-]{paragraph.5.5.1.1.1}{Transferieren der App-Ressourcen in das AEM}{subsubsection.5.5.1.1}% 98
+\BOOKMARK [3][-]{subsubsection.5.5.1.2}{Content Ordner}{subsection.5.5.1}% 99
+\BOOKMARK [3][-]{subsubsection.5.5.1.3}{Hybride}{subsection.5.5.1}% 100
+\BOOKMARK [2][-]{subsection.5.5.2}{Ansatz Java}{section.5.5}% 101
+\BOOKMARK [3][-]{subsubsection.5.5.2.1}{Erkl\344rung}{subsection.5.5.2}% 102
+\BOOKMARK [3][-]{subsubsection.5.5.2.2}{Anpassen des Webservers}{subsection.5.5.2}% 103
+\BOOKMARK [3][-]{subsubsection.5.5.2.3}{Anpassen der Webanwendung}{subsection.5.5.2}% 104
+\BOOKMARK [3][-]{subsubsection.5.5.2.4}{Ablauf der AEM-Komponente}{subsection.5.5.2}% 105
+\BOOKMARK [4][-]{paragraph.5.5.2.4.1}{HTML-Seite aufbereiten}{subsubsection.5.5.2.4}% 106
+\BOOKMARK [4][-]{paragraph.5.5.2.4.2}{Ajax-Anfragen anpassen}{subsubsection.5.5.2.4}% 107
+\BOOKMARK [3][-]{subsubsection.5.5.2.5}{Aufbereitungsaufgabe bei unterschiedlichen Frameworks}{subsection.5.5.2}% 108
+\BOOKMARK [3][-]{subsubsection.5.5.2.6}{Konfiguration}{subsection.5.5.2}% 109
+\BOOKMARK [3][-]{subsubsection.5.5.2.7}{Varianten}{subsection.5.5.2}% 110
+\BOOKMARK [2][-]{subsection.5.5.3}{Ansatz JavaScript}{section.5.5}% 111
+\BOOKMARK [1][-]{section.5.6}{Proxy}{chapter.5}% 112
+\BOOKMARK [1][-]{section.5.7}{Suchmaschinen}{chapter.5}% 113
+\BOOKMARK [1][-]{section.5.8}{Bewertung der L\366sungen}{chapter.5}% 114
+\BOOKMARK [0][-]{chapter.6}{Zusammenfassung}{}% 115
+\BOOKMARK [1][-]{section.6.1}{Fazit}{chapter.6}% 116
+\BOOKMARK [1][-]{section.6.2}{Ausblick}{chapter.6}% 117
+\BOOKMARK [0][-]{chapter*.24}{Literaturverzeichnis}{}% 118

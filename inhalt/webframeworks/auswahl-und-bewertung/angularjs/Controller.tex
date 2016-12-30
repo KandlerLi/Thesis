@@ -1,0 +1,35 @@
+\subsubsection{Controller}
+Für die Realisierung des MVC-Muster unterstützt einem auch hier AngularJS. Als Beispiel soll eine Musikdatenbank dienen, welche sich nach durchsuchen lässt. Hierfür wird ein Controller benötigt, wessen Erzeugung sich ebenfalls mit AngularJS bewerkstelligen lässt. Dieser wird in die Datei \quotes{app.js}, \autoref{lst:angularjs-controll} ausgelagert.
+
+\begin{lstlisting}[style=htmlcssjs, caption=Ein Controller für das MVC-Muster einer Musikdatenbank, label=lst:angularjs-controll,escapechar=|]
+var module = angular.module('songDatabase', []);
+module.controller('SongCtrl', function($scope, $http){ 
+	$http.get('songs.json').then(function(response) { |\label{line:angularjs-ajax}|
+		$scope.songs = response.data;
+	});
+});
+\end{lstlisting}
+
+Zunächst wird ein Modul mit dem Namen \quotes{songDatabase} angelegt. Mit diesem wird ein Controller Namens \quotes{SongCtrl} eingerichtet. Hinter den Parametern \quotes{\$scope} und \quotes{\$http} stecken von AngularJS bereitgestellte Objekte. Über \$scope werden Daten an die View bereitgestellt. \$http bietet Funktionalitäten an, wie zum Beispiel für Ajax-Anfragen \cite[S. 37]{ste15}. Solch eine Anfrage auf die Datei \quotes{songs.json} befindet sich in \autoref{line:angularjs-ajax} im \autoref{lst:angularjs-controll}, um Daten von dem Model zu besorgen. Normalerweise würde sich die Anfrage an einen Service richten, welche die Daten des Model dynamisch generiert, bzw. aus einer Datenbank abfragt und zur Verfügung stellt. Der Einfachheit halber soll hier jedoch eine statische JSON-Datei, wie in \autoref{lst:json}, verwendet werden.\\
+Es fehlt noch die View, damit die Daten des Model dargestellt werden. Diese heißt hier \quotes{index.html} und ist in \autoref{lst:angularjs-view} zu sehen.
+
+\begin{lstlisting}[style=htmlcssjs, caption=Ein Javascript Beispiel, label=lst:angularjs-view]
+<html ng-app="songDatabase">
+	<head>
+		<meta charset="utf8" />
+		<title>Eigenes Modul in AngularJS</title>
+		<script src="angular.js"></script>
+		<script src="app.js"></script>
+	</head>
+<body>
+	<form>
+		<input type="text" ng-model="search" />
+	</form>
+		<table ng-controller="SongCtrl">
+			<tr ng-repeat="song in songs | filter:search">
+				<td>{{song.title}}</td><td>{{song.price}}</td>
+			</tr>
+		</table>
+	</body>
+</html>
+\end{lstlisting}

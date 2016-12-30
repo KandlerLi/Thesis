@@ -1,0 +1,27 @@
+\subsection{HTML}
+\label{html}
+\ac{html} dient als Sprache, um HTML-Dokumente zu beschreiben. Ein HTML-Dokument ist ein Textdokument, bestehend aus mehreren Tags. Dies sind in spitzen Klammern eingeschlossene Namen. Sie können durch Attribute weiter beschrieben werden. Ein Tag beschreibt Texte, Überschriften, Bilder, Tabellen etc. Zudem können Tags ineinander verschachtelt werden, um zusammenhängende Elemente logisch zu gruppieren. Ein Webbrowser kann diese Struktur interpretieren und entsprechend darstellen \cite{lub07}. Die aktuelle Version HTML5 wurde am 28.10.2014 veröffentlicht und bietet einige neue Funktionen \cite{W3C2014}. Der typische Aufbau eines HTML-Dokumentes ist hierbei wie folgt.
+
+\begin{lstlisting}[style=htmlcssjs, caption=Beispiel HTML, label=lst:html]
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Der Seitentitle</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <div id="inhalt">Meine erste Webseite!</div>
+    <img src="flowerpot.png" alt="Eine Blume"/>
+  </body>
+</html>
+\end{lstlisting}
+
+Ein Webbrowser ist nun in der Lage den HTML-Code zu interpretieren und darzustellen, \autoref{lst:html} würde dabei wie \autoref{img:html} im Webbrowser aussehen.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=.5\textwidth]{html.png}
+        \caption{Beispiel HTML}
+        \label{img:html}
+    \end{center}
+\end{figure}

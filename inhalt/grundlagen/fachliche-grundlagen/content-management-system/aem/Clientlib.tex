@@ -1,0 +1,29 @@
+\paragraph{Clientlib}
+\label{sec:clientlib}
+JavaScript und CSS können durch sogenannte Client Libraries oder kurz auch Clientlib ausgeliefert werden. Dies sind einfache Knoten mit einer bestimmten Struktur und Eigenschaften, welche sich innerhalb einer Komponente oder unter \hl{/etc/cliebtlibs} befinden. \autoref{lst:clientlib} zeigt exemplarisch die benötigte Struktur und ihre Eigenschaften.
+
+\begin{lstlisting}[style=jcr, caption=Exemplarische Darstellung einer Clientlib, label=lst:clientlib]
+/etc/clientlibs/angularapp
+  - jcr:primaryType (Name) = cq:ClientLibraryFolder  # Indiziert Knoten als Clientlib
+  - categories (String[]) = [angularApplication]     # Ein Array an Kategorien, an dem die Clientlib idendifiziert wird.
+  - dependencies (String[]) = [angularjs]            # Mögliche Abhängigkeiten zu anderen Clientlibs
+  - embedded (String[]) = [app1, app2]               # Andere Clientlibs können hier eingebettet werden
+  + js.txt                                           # Auflistung aller JavaScript Dateien
+    - jcr:primaryType = nt:file
+  + css.txt                                          # Auflistung aller CSS Dateien
+    - jcr:primaryType = nt:file
+  + scripts                                          # Ordner für Scripte
+    - jcr:primaryType (Name) = nt:folder
+  + styles                                           # Ordner für CSS
+    - jcr:primaryType (Name) = nt:folder
+\end{lstlisting}
+
+Die Ordnernamen für CSS und JavaScript sind hierbei frei wählbar und können auch Unterordner beinhalten. Auch eine Platzierung direkt unterhalb des clientlib-Knotens ist möglich.\\
+Innerhalb eines Templates wird nun die Clientlib mithilfe eines entsprechenden Tags verwendet. Dieser würde bei \ac{htl} wie in \autoref{lst:clientlib} aussehen.
+
+\begin{lstlisting}[style=htmlcssjs,caption=Verwendung einer Clientlib in AEM, label=lst:clientlib_useage]
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-unwrap/>
+<sly data-sly-call="${clientlib.all @ categories='angularApplication'}" data-sly-unwrap/>
+\end{lstlisting}
+
+Zeile 1 wird für den Einsatz von Clientlibs benötigt. Zeile 2 gibt an, welche Clientlib verwendet werden soll. Durch clientlib.all werden alle Ressourcen der Clientlib geladen, clientlib.js und clientlib.css würde nur das Laden der JavaScript- bzw. CSS-Dateien bewerkstelligen. Der Wert hinter categories gibt ein Array an Kategorien an. Nun werden alle Clientlibs samt ihren Abhängigkeiten, welche diesen Kategorien entsprechen, geladen.

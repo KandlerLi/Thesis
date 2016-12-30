@@ -1,0 +1,4 @@
+\subsubsection{Virtueller DOM}
+\label{sec:virtueller-dom}
+
+React verfolgt einen anderen Ansatz der Datenbindung als die zuvor genannten Frameworks. Änderungen werden hier nicht direkt in den \ac{dom} eingetragen, sondern zunächst in einen virtuellen DOM. Dieser stellt eine abstrakte Kopie zum regulären DOM dar. Sollte ein Element verändert werden, wird diese Änderung zunächst im virtuellen DOM eingetragen. React ermittelt nun den Unterschied zum virtuellen und realen DOM und fügt in Letzteres nur die benötigten Änderungen ein. Dieser Vorgang des Vergleichens und dass nur die benötigten Teile aktualisiert werden, ist in der Regel sehr schnell \cite[S. 19]{Fedosejev2015}.

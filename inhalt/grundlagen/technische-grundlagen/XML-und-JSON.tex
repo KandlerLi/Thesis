@@ -1,0 +1,40 @@
+\subsection{XML und JSON}
+Bei der \ac{xml} handelt es sich um eine Notation, um Daten hierarchisch und strukturiert in einer Textdatei und in einem für den Menschen lesbaren Format darzustellen \cite[S. 34]{seb10}. Als Beispiel soll eine kurze Datenbank für Musikstücke im \autoref{lst:xml} dienen. Diese besteht aus vier Musikstücken mit jeweils einer ID, einem Titel und einem Preis.
+\begin{lstlisting}[style=xml, caption=Ein XML-Beispiel, label=lst:xml]
+<?xml version="1.0" encoding="UTF-8" ?>
+<songs>
+	<song>
+		<id>1</id>
+		<title>Lets Go</title>
+		<price>0.99</price>
+	</song>
+	<song>
+		<id>2</id>
+		<title>Song about Pencils</title>
+		<price>2.3</price>
+	</song>
+	<song>
+		<id>3</id>
+		<title>Samba samba</title>
+		<price>0.5</price>
+	</song>
+	<song>
+		<id>4</id>
+		<title>Another Song</title>
+		<price>3.33</price>
+	</song>
+</songs>
+\end{lstlisting}
+
+Ein anderes, ebenfalls verwendetes Übertragungsformat bei Ajax ist \ac{json}. Diese ist im Gegensatz zu XML kompakter und lässt sich direkt in JavaScript umwandeln \cite[S. 658]{rie09}. So könnte die Musikdatenbank hier wie in \autoref{lst:json} aussehen.
+
+\begin{lstlisting}[style=htmlcssjs, caption=JSON für eine einfache Musikdatenbank, label=lst:json]
+[
+	{ "id": 1, "title": "Lets Go", "price": 0.99 },
+	{ "id": 2, "title": "Song about Pencils", "price": 2.3 },
+	{ "id": 3, "title": "Samba samba", "price": 0.5 },
+	{ "id": 4, "title": "Another Song", "price": 3.33 }
+]
+\end{lstlisting}
+
+Zu beachten ist, dass \autoref{lst:json} keine 1:1-Umsetzung von \autoref{lst:xml} darstellt, sondern einen etwas anders hierarchischen Aufbau verwendet. Zudem geht die Information, dass es sich um Songs handelt, verloren. Die damit darstellbaren Daten sind jedoch identisch.

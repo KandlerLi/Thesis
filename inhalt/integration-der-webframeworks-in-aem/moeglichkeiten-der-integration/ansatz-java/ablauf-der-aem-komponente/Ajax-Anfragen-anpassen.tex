@@ -1,0 +1,13 @@
+\paragraphtbd{Ajax-Anfragen anpassen}
+\label{sec:ajax-anfragen-anpassen}
+
+Im zweiten Schritt werden Ajax-Anfragen umgeleitet. Diese sind zumeist ebenfalls relativ und würden somit versuchen eine App-Ressource unter \serverA anfordern, die sich jedoch unter \serverB befindet. Gerade \ac{di}-Bibliotheken laden läufig Skripte nach. \\
+Für die Umleitung überschreibt \filefolder{ajaxredirect.js} das \ac{xhr}-Objekt. Die \ac{xhr}-Schnittstelle wird vom \ac{w3c} spezifiziert und ist ein wesentlicher Bestandteil von \ac{ajax}, da hiermit Daten asynchron zwischen Server und Client auszutauschen. \\
+Das überschriebene \ac{xhr}-Objekt überprüft ob es sich bei der angeforderten \ac{url} um eine relative oder absolute handelt. Falls diese relativ ist hat dies zu bedeuten, dass die App-Ressource sich unter \serverB befindet. In dem Fall wird die Anfrage nun über ein Servlet, hier mit dem Namen \filefolder{GetData.java}, umgeleitet. Die Umleitung über das Servlet anstelle einer direkten Anfrage an den Webserver hat zwei Vorteile. \\
+Zum einen werden hier Probleme mit Zugriffsrechten, wie das in \autoref{sec:anpassen-des-webservers} erläuterte Sicherheitskonzept \ac{sop}, erleichtert. Ohne Servlet würde der Client direkt auf Server-Ressourcen des Webservers zugreifen, was in der Regel zu einem Fehler führt. Der Webserver müsste somit allen Clienten den Zugriff autorisieren. Über ein Servlet jedoch ist es so, dass der \ac{aem}-Server die Anfrage an den Webserver stellt. Somit kann der Webserver so konfiguriert werden, dass er nur Anfragen vom \ac{aem}-Server erlaubt.
+\\
+Zum anderen können an dieser Stelle noch Änderungen an den angefragten App-Ressourcen erfolgen. Zum Beispiel könnten hier die Templates einer AngularJS-Webanwendung nach relativen Hyperlinks durchsucht und diese angepasst werden.
+
+
+
+Ist sie relativ, wird dieser die \serverB am Anfang angefügt. Je nach Anwendung wird auch die \ac{url} vom \ac{aem}, also \serverA, angehängt, zum Beispiel wenn sich die Bilder dort befinden.  Zuletzt wird die \ac{ajax}-Anfrage normal ausgeführt.

@@ -1,0 +1,57 @@
+\include{config/commands}
+\include{config/headerFooter}
+\include{config/vars}
+\include{config/code}
+
+\emergencystretch=1em
+
+\definecolor{tableheader}{RGB}{240,240,250}
+%\bibliographystyle{natdin}
+\bibliographystyle{alphadin}
+
+%1,3 facher Zeilenabstand
+\setstretch{1.3}
+
+%Table of Content Tiefe
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+%Durchgehend nummerieren
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\lstset{ numberbychapter=false}
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thesubject\@subject
+
+%Inhaltsverzeichnis in das Inhaltsverzeichnis
+\setuptoc{toc}{totoc}
+
+%Kapitel nicht einrücken
+
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+	{-3.25ex \@plus -1ex \@minus -0.2ex}%
+	{0.01pt}%
+	{\raggedsection\normalfont\sectfont\nobreak\size@paragraph}%
+}
+
+
+\usepackage{soul}
+\definecolor{hl-color}{RGB}{240,240,240}
+\sethlcolor{hl-color}
+\setsvg{svgpath = src/svg/}
+
+\lstset{literate=%
+	{Ö}{{\"O}}1
+	{Ä}{{\"A}}1
+	{Ü}{{\"U}}1
+	{ß}{{\ss}}1
+	{ü}{{\"u}}1
+	{ä}{{\"a}}1
+	{ö}{{\"o}}1
+	{~}{{\textasciitilde}}1
+}
+
+\graphicspath{{./src/img/}}

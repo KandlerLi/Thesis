@@ -1,0 +1,21 @@
+\subsubsection{Datenbindung}
+Eine Eigenschaft von AngularJS ist die automatisierte Datenbindung, um ein Model bzw. View-Model mit seiner View in beide Richtungen zu verknüpfen. Wird das Model geändert, so ändert sich auch die View entsprechend und umgekehrt. Siehe hierfür \autoref{lst:angularjs-databindung}.
+
+\begin{lstlisting}[style=htmlcssjs, caption=Datenbindung bei AngularJS, label=lst:angularjs-databindung]
+<html ng-app>
+	<head>
+		<meta charset="utf8" />
+		<title>Datenbindung bei AngularJS</title>
+		<script src="angular.js"></script>
+	</head>
+	<body>
+		<form>
+			<input placeholder="Benutzername" type="text" ng-model="username">
+		</form>
+		<p>Hallo, {{username}}</p>
+	</body>
+</html>
+\end{lstlisting}
+
+Um die Basisfunktionalität von AngularJS nutzen zu können, muss lediglich die Datei angular.js eingebunden werden, welche sich zum Beispiel von \url{https://www.angularjs.org} beziehen lässt. \\
+AngularJS verwendet eine Palette von Attributen, welche mit \quotes{ng-} beginnen. Diese Attribute werden auch als Direktiven bezeichnet \cite[S. 40]{ste15}. Die Direktive ng-app weist AngularJS darauf hin, dass es sich bei folgender HTML-Seite um eine AngularJS-Webanwendung handelt. Wird nun der Inhalt des mit ng-model versehenen Eingabefeldes verändert, so wird der Platzhalter \{\{username\}\} mit der entsprechenden Eingabe ersetzt.

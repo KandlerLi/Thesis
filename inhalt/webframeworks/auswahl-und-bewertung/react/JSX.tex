@@ -1,0 +1,30 @@
+\subsubsection{JSX}
+Da es sich bei React um eine Bibliothek und kein Framework handelt stellt diese auch keine MV-* Architektur zur Verfügung. Vielmehr dient React mehr dazu die Präsentationsebene, also die View, zu erstellen. Hierfür kommt \ac{jsx} zum Einsatz.\\
+Das Erstellen neuer Elemente wird mit der Funktion React.createElement bewerkstelligt. Als Beispiel soll folgender HTML-Code generiert werden.
+
+\begin{lstlisting}[style=htmlcssjs, caption=Zu generierender HTML-Code, label=lst:reacthtml]
+<Nav color="blue">
+	<Profile>
+		click
+	</Profile>
+</Nav>
+\end{lstlisting}
+
+Mit React würde dies mit der Funktion React.createElement geschehen.
+
+\begin{lstlisting}[style=htmlcssjs, caption=Generierung von HTML in React, label=lst:withoutjsx]
+var Nav, Profile;
+var app = React.createElement(
+Nav,
+{color:"blue"},
+React.createElement(Profile, null, "click")
+);
+\end{lstlisting}
+
+Das \autoref{lst:withoutjsx} kann auch mit \ac{jsx} geschrieben werden. Diese in React enthaltene Bibliothek wandelt XML-ähnlichen Code in JavaScript um.
+
+\begin{lstlisting}[style=htmlcssjs, caption=Generierung von HTML mit JSX, label=lst:withjsx]
+var app = <Nav color="blue"><Profile>click</Profile></Nav>;
+\end{lstlisting}
+
+Somit wird durch den Einsatz von \ac{jsx} das \autoref{lst:withjsx} im Hintergrund in \autoref{lst:withoutjsx} umgewandelt.

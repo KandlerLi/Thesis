@@ -1,0 +1,69 @@
+\sectiontbd{Suchmaschinen}
+\label{sec:suchmaschinen}
+Falls die Webanwendung die in \autoref{sec:seo} beschriebene pushState-Funktion verwendet, so ist eine entsprechende Konfiguration des \ac{aem} Server von Nöten, um alle Anfragen, welche die \ac{spa} betreffen, dementsprechend umleiten.\\
+Als Beispiel soll eine AngularJS-Anwendung dienen, welche unter \filefolder{/content/angular/} liegt. Sie soll über \pseudourl{http://localhost:4502/spa} zu erreichen sein. Somit sind alle Ressourcen der Webanwendung auch unter besagter \ac{url} erreichbar. \\
+Es wird angenommen, dass alle \ac{url}s, die einen Punkt haben, einer App-Ressource wie Skripte, Bilder etc. entsprechen. Ansonsten handelt es sich um eine Webseite innerhalb der \ac{spa}. Alle Webseiten werden auf die HTML-Seite der \ac{spa} umgeleitet, im Beispiel auf \filefolder{index.html}. Alle weiteren App-Ressourcen erhalten eine relative Umleitung. \autoref{tab:resolution} zeigt beispielhaft einige vom Browser angeforderte Web-Ressourcen und unter welchen JCR-Knoten diese zu finden sind. \\
+
+\begin{minipage}{\textwidth}
+	\begin{longtable}{|p{0.40\textwidth}|c|c|p{0.25\textwidth}|}
+		\hline  
+		Angeforderte \ac{url}s & Ressourcetyp & Hat Punkt & Ziel JCR-Knoten\\  \hhline{|=|=|=|=|}
+		
+		\pseudourl{http://localhost:4502/spa/} & Webseite & Nein & \pseudourl{/content/angular/index.html} \\ 
+		\hline
+		 
+		 \pseudourl{http://localhost:4502/spa/news/} & Webseite & Nein & \pseudourl{/content/angular/index.html} \\ 
+		 \hline
+		 
+		 \pseudourl{http://localhost:4502/spa/about/} & Webseite & Nein & \pseudourl{/content/angular/index.html} \\ 
+		 \hline
+		 
+		 \pseudourl{http://localhost:4502/img/logo.png} & Bild & Ja & \pseudourl{/content/angular/img/logo.png} \\ 
+		 \hline
+		 
+		 \pseudourl{http://localhost:4502/spa/ressources/style.css} & Stylesheet & Ja & \pseudourl{/content/angular/ressources/style.css} \\ 
+		 \hline
+		\caption{Beispiel für die interne Umleitung}\label{tab:resolution}
+	\end{longtable}
+\end{minipage}
+
+Hier kommt der Apache Sling Resource Resolver zum Einsatz \cite{Foundation2016}. Über das \ac{jcr} werden Regeln für die Umleitung der angeforderten \ac{url}s gesetzt. In der Standardkonfiguration befinden sich diese unter \filefolder{/http/map/}. Jede Regel setzt sich auch der hierarchischen Struktur und verschiedenen Eigenschaften zusammen. Um die anforderten \ac{url}s aus \autoref{tab:resolution} entsprechend umzuleiten empfiehlt sich die Struktur wie in \autoref{lst:resolver}.
+
+\begin{lstlisting}[style=jcr,caption=Konfigurationsbeispiel für den Apache Sling Resource Resolver, label=lst:resolver]
+/etc/map/http/
++ localhost.4502/
+  - jcr:primaryType (Name) = sling:Mapping
+  + spa/
+    - jcr:primaryType (Name) = sling:Mapping
+    - sling:internalRedirect (String) = /content/angular
+    + path/
+      - jcr:primaryType (Name) = sling:Mapping
+      - sling:match (String) = ([^.]*)
+      - sling:internalRedirect (String) = /content/angular/index.html
+\end{lstlisting}
+
+Die Regeln basieren auf regulären Ausdrücken. Bei regulären Ausdrücken handelt es sich um eine Notation zur Beschreibung von Textmustern. Durch die Hinzunahme einer geeigneten Programmiersprache ist es möglich Texte nach dem Textmuster zu durchsuchen und diesen so zu erweitern, zu reduzieren und zu manipulieren \cite[S. 1 f.]{Friedl2009}. \\
+Der reguläre Ausdruck wird aus den konkatenierten Namen der Knoten, bzw. dem Wert der Eigenschaft sling:match, falls ein Knoten diese besitzt, zusammengesetzt. Der Wert der Eigenschaft sling:internalRedirct steht für die Ziel-URL im \ac{jcr}. \\
+Aus der gegebenen Konfiguration resultieren zwei Regeln. Der Knoten \filefolder{/etc/map/http/localhost.4502/spa/path/} beschreibt, dass alle \ac{url}s, die mit \pseudourl{http://localhost:4502/spa/path/} beginnen, aber keinen Punkt in der \ac{url}, auf \filefolder{/content/angular/index.html} verweisen. Ansonsten gilt die erstellte Regel unter Knoten \filefolder{/etc/map/http/localhost.4502/spa/}
+
+Wie die Auflösung verschiedener \ac{url}s geschehen würde ist der \autoref{img:resolve} zu entnehmen.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{resolver.png}
+		\caption{Möglichkeit zum Auflösen von Anfragen unter AEM}
+		\label{img:resolve}
+	\end{center}
+\end{figure}
+
+
+%\begin{figure}[htbp]
+%	\centering
+%	\includesvg[pretex=\tiny]{resolver}
+%	\caption{svg image}
+%\end{figure}
+
+
+\missing{Text}
+
+

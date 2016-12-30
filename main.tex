@@ -1,0 +1,52 @@
+%\documentclass[a4paper, 12pt, listof=list, bibliography=totoc, pointlessnumbers, oneside]{scrreprt}
+\documentclass[a4paper, 12pt, listof=totoc, bibliography=totoc]{scrreprt}
+\input{header}
+\input{config}
+
+\input{acro}
+
+%Zum Testen alle Bilder ausblenden
+%\renewcommand*\includegraphics[2][]{}
+
+%\usepackage{helvet}
+%\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\input{deckblatt}
+
+\input{inhalt/Ehrenwoertliche-erklaerung}
+\input{inhalt/Vorwort}
+\input{inhalt/Kurzzusammenfassung}
+
+\newpage
+\tableofcontents
+\listoffigures
+\listoftables
+\lstlistoflistings
+
+
+%\acsetup{
+%	list-long-format = \makefirstuc ,
+%	list-style = lof ,
+%	list-heading = chapter* ,
+%	extra-style = comma
+%}
+
+%\chapter{Abkürzungsverzeichnis}
+\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
+\printacronyms[name=Abkürzungsverzeichnis, heading=chapter*]
+
+
+\clearpage\pagenumbering{arabic}
+
+\input{inhalt/Einleitung}
+\input{inhalt/Grundlagen}
+\input{inhalt/Webframeworks}
+\input{inhalt/Analyse-des-Ist-Zustand}
+\input{inhalt/Integration-der-Webframeworks-in-AEM}
+\input{inhalt/Zusammenfassung}
+
+\bibliography{jabref/database}
+
+\end{document}

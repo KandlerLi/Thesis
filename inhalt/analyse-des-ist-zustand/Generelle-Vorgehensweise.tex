@@ -1,0 +1,15 @@
+\section{Generelle Vorgehensweise}
+Der Werdegang einer Webanwendung zu einer \ac{aem}-Komponente erfolgt generell in mehreren Schritten.\\
+
+\begin{description}
+	\item[1. Entwicklung] Die Webanwendung wird innerhalb
+	\item[2. Anpassen] description
+	\item[3. Integration] description
+	\item[4. Auslieferung] description
+\end{description}
+
+Dabei wird abgesondert von der Zielplattform innerhalb einer Entwicklungsumgebung die \ac{aem}-Komponente entwickelt. Nach der Fertigstellung erfolgt die Integration der \ac{aem}-Komponente in die \ac{aem}-Instanz der Zielplattform. Die \ac{aem}-Komponente kann nun ein Autor innerhalb der Autoren-Bedienoberfläche aufrufen und in eine Webseite integrieren.
+\\
+Besagte Komponenten basieren jedoch in erster Linie auf serverseitigen Technologien. Bei der Interaktion mit dem Besucher resultiert dies zu der Problematik, dass neue Inhalte nur serverseitig generiert werden können. Somit wird hier die Webseite komplett neu geladen, wie in \autoref{sec:server-webanwendung} beschrieben wurde. Dieses Verhalten kann sich negativ auf das Nutzererlebnis des Besuchers auswirken. Dieser ist gerade von mobilen Geräten wie Tablets und Smartphones gewohnt, dass diese schnell und ohne größere Wartezeiten auf Benutzerinteraktionen reagieren und das gewünschte Resultat anzeigen \cite[S. 78]{Rizvanoglu2013}. Um dies auch in Webanwendungen zu ermöglichen, lassen sich clientseitige Webframeworks verwenden, um so clientseitige Webanwendungen, wie jene in \autoref{sec:client-webanwendung} beschrieben, zu verfassen.\\
+Der Gedanke ist hier, die vorteilhaften Eigenschaften von clientseitigen und serverseitigen Webframeworks zu kombinieren. Statische Inhalte wie Bilder und Nachrichten werden über das \ac{aem} gepflegt. Sich häufig ändernde Inhalte, wie Datenbankinhalte oder Informationen von teils externen \ac{rest}-Schnittstellen lassen sich über besagte clientseitige Webframeworks zur Laufzeit der HTML-Seite nachladen und anzeigen. \\
+Zu beachten ist, dass im Folgenden der Begriff \quotes{Webanwendung} kurz für \quotes{clientseitige Webanwendung} steht. Eine mit \ac{aem} verfasste Webanwendung wird \ac{aem}-Webanwendung genannt.

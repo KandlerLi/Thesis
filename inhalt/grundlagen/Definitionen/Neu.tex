@@ -1,0 +1,67 @@
+Zunächst soll auf einige Begriffsdefinitionen eingegangen werden.
+%\begin{table}[H]
+%\begin{tabularx}{\textwidth}{|l|X|}
+\begin{longtable}{| p{.20\textwidth} | p{.80\textwidth} |} 
+\hline 
+	\thead{Begriff} & \thead{Definition} \\ 
+\hline
+
+Ressource & Eine Ressource ist alles, was von einem Programm geladen und weiter verarbeitet werden kann. Hierzu zählen Dateien, Datenbanken und vieles mehr. Je nach Kontext lässt sich eine Ressource auch genauer spezifizieren, wie z. B. als Web-Ressource oder als Server-Ressource.\\
+\hline
+
+Web-Ressource & Web-Ressourcen sind Ressourcen wie z. B. Webseiten, Bilder oder JavaScript, welche über eine eindeutige \acs{url}, wie z. B. \pseudourl{example.com/index.html},  \pseudourl{example.com/bilder/flowerpot.png} oder \pseudourl{example.com/jquery.js}, erreichbar sind. Der Begriff \acs{url} wird in \autoref{sec:url} näher beschrieben.\\
+\hline
+ 
+Webpräsenz & Eine Webpräsenz ist der Zusammenschluss Web-Ressourcen unter einer Verantwortlichkeit. Diese wird zumeist unter einer Domain, wie zum Beispiel \pseudourl{example.com} betrieben. Für die Pflege des Inhalts sind zumeist eine oder mehrere Personen verantwortlich. Eine Webpräsenz wird im Englischen auch Website genannt.
+	\\ 
+\hline 
+
+
+Webseite & Unter einer Webseite versteht man eine einzige Seite einer Webpräsenz, die in einem Webbrowser dargestellt werden kann \cite[S. 30]{JacobsenGidda2016}. Zwischen den einzelnen Webseiten kann navigiert werden. Eine Webseite wird im Englischen auch Webpage genannt. \\
+\hline
+
+HTML-Seite & Eine HTML-Seite im engeren Sinne ist eine Web-Ressource, die dem Browser als HTML-Quellcode geliefert wird.  Eine HTML-Seite im weiteren Sinne ist eine Web-Ressource, die dem Browser als HTML-Quellcode ergänzt um CSS- und JavaScript-Code geliefert wird. \\
+\hline
+
+(Web-)Server & Ein Webserver ist ein Programm auf einem Rechner, der Web-Ressourcen über das HTTP-Protokoll zur Verfügung stellt. Im Folgenden wird ein Server, sofern nicht anders beschrieben, als Synonym für einen Webserver verstanden. Ein Webserver dient in erster Linie dazu eine Webpräsenz über das Internet zur Verfügung zu stellen. Siehe auch \autoref{sec:webserver}.
+\\
+\hline
+
+Server-Ressourcen & Server-Ressourcen sind alle Ressourcen, auf die ein Webserver zurückgreifen kann. Dies wären zum Beispiel HTML-Dokumente, Konfigurationsdateien oder Datenbanken. Viele der Server-Ressourcen werden dann zu Web-Ressourcen. \\
+\hline
+
+Inhalte (Content) & Inhalte, oft auch Content genannt, sind Ressourcen mit einen Informationsgehalt, der z.B. als Text oder als Bild dargestellt ist \cite[S. 239]{MorvilleRosenfeld2006}. Diese Inhalte können in separaten Dateien oder in anderen Server-Ressourcen eingebettet sein. Um diese leichter zu verwalten lässt sich ein CMS System einsetzen.\\
+\hline
+
+Webbrowser & Ein Webbrowser ist ein Computerprogramm, das Web-Ressourcen über das HTTP-Protokoll herunterladen und darstellen kann.\\
+\hline
+
+Webanwendung & Eine Webanwendung ist ein Programm, das Web-Ressourcen erzeugt, die im Browser dargestellt werden oder via HTTP-Protokoll herunter geladen werden können. Zumeist kann ein Besucher einer Webpräsenz interaktiv mit der Webanwendung interagieren. 
+Dabei ist zwischen serverseitigen Webanwendungen und clientseitigen Webanwendungen zu unterscheiden.
+Bei einer Webpräsenz können alle Web-Ressourcen oder auch nur ein Teil über Webanwendungen erzeugt werden. Für eine detaillierte Beschreibung des Begriffs Webanwendung siehe \autoref{sec:webanwendung}. 
+\\
+\hline
+App-Ressource & Eine App-Ressource sind alle Ressourcen, die für die korrekte Ausführung einer Webanwendung von Nöten sind. Der Begriff \quotes{App} leidet sich von \quotes{Applikation}, die englische Übersetzung für \quotes{Anwendung} ab. 
+\\
+\hline
+
+SPA & Sonderform einer clientseitigen Webanwendung, die aus nur einer HTML-Seite im weiteren Sinne besteht.\\
+\hline
+
+Besucher & Als Besucher versteht man im Folgenden eine Person, die eine Webpräsenz
+und dessen Webseiten besucht. Als Synonym kann auch der Begriff
+„Anwender“ Verwendung finden. 
+
+\\
+\hline
+
+Entwickler & Hier sind mit Entwicklern meist eine oder mehrere Personen gemeint, die eine Webanwendung oder einen Teil einer Webanwendung, wie z.B. ein Framework oder eine Bibliothek  für einen Kunden entwickeln.\\
+\hline
+
+Kunde & Der Kunde ist der Auftraggeber für die Entwicklung einer Webanwendung.\\
+\hline
+
+%\end{tabularx} 
+\caption{Definitionen}\label{tab:definitionen}
+%\end{table}
+\end{longtable}

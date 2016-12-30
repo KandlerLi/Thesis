@@ -1,0 +1,58 @@
+%\subsection{Suchmaschinenoptimierung}
+\subsection{Indizierung von Suchmaschinen}
+\label{sec:seo}
+
+Das Internet ist eines der sich am schnellsten entwickelnden Medienlandschaften. Viele Unternehmen unterschiedlichster Größenordnung sind hier vertreten, manch eine Firma präsentiert sich sogar nur online \cite[S. 29 f.]{EstherKessler2015}. Da viele Benutzer täglich eine Suchmaschine verwenden oder eine als Startseite ihres Browsers festgelegt haben, sollte es für ein Unternehmen von hoher Wichtigkeit sein, dass seine Webpräsenz mit den richtigen Begriffen bei einer Suche möglichst weit oben erscheint \cite[S. 147]{EstherKessler2015}.\\
+
+\subsubsection{Funktionsweise einer Suchmaschine}
+Damit eine Webpräsenz mitsamt ihren Webseiten überhaupt in einem Suchergebnis erscheint, werden diese von der jeweiligen Suchmaschine zunächst indiziert. Dies übernehmen Programme, sogenannte Crawler oder auch Robots. Diese durchsuchen das Internet und erstellen einen Katalog aller gefundenen Webseiten. Weitere Webseiten werden über interne und externe Hyperlinks, die sich in den zuvor gefundenen Webseiten befinden, erreicht. Externe Hyperlinks sind eine Möglichkeit, weitere Webpräsenzen zu finden. Auch diese werden wieder indiziert und auf weitere Hyperlinks durchsucht. Solch eine Navigationsstruktur kann wie in \autoref{img:navi-mpa} aussehen.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.8\textwidth]{navi-mpa.png}
+		\caption{Mögliche Navigationsstruktur einer Webseite}
+		\label{img:navi-mpa}
+	\end{center}
+\end{figure}
+
+Zu sehen ist, dass alle Webseiten von der Einstiegsseite (\pseudourl{index.html}) aus zu erreichen sind. Über diese wird auf die Nachrichtenübersicht (\pseudourl{/news}) und das Impressum (\pseudourl{/abbout}) verwiesen. Die beiden Nachrichteneinträge (\pseudourl{/news/1989/07/01} und \pseudourl{/news/2014/04/01}) sind über die Nachrichtenübersicht erreichbar. Im Impressum ist ein externer Hyperlink (\pseudourl{kandler.li/index.php}) vorzufinden.
+
+Anhand von Schlagwörtern und Algorithmen werden die Webseiten analysiert und in den Katalog der Suchmaschine aufgenommen. Besagter Algorithmus entscheidet, welche Webseite durch welche Suchbegriffe in der Reihenfolge der Suchergebnisse erscheint. Dieser Algorithmus ist in der Regel äußerst komplex und umfasst am Beispiel Google über 200 zu berücksichtigende Faktoren \cite[S.163 f.]{EstherKessler2015}. 
+
+Nun sollte eine Suchmaschine in der Lage sein, eine Webpräsenz samt all ihrer Webseiten zu indizieren. Die Suche nach \quotes{www.example.com Impressum} sollte hier im Idealfall als erstes Ergebnis das Impressum von \pseudourl{example.com} liefern. \\
+
+\subsubsection{Probleme bei Single-Page-Webanwendungen}
+Nun ist eine \ac{spa} so gestaltet, dass diese nur aus einer einzigen HTML-Seite besteht und ein Nachladen von Inhalten meist durch JavaScript und \ac{ajax} erfolgt. Wegen dieser Eigenschaften resultieren einige Probleme in der Indizierung.
+
+
+\paragraph{Nachladen mit JavaScript}
+
+Suchmaschinen analysierten früher zur Indizierung lediglich den Quellcode einer Webseite. Alle JavaScript-Anweisungen wurden ignoriert und nicht wie in einem Webbrowser interpretiert, womit eine \ac{spa} für die Suchmaschine oft ohne bedeutenden Inhalt erschien. Im Jahr 2009 gab Google bekannt, nun auch JavaScript und \ac{ajax} beim Crawling zu berücksichtigen \cite{Google2009}.\\
+
+\paragraph{Hyperlinks innerhalb der SPA}
+Problematisch ist aber noch die Navigation zwischen den einzelnen Webseiten. Bei einer traditionellen \ac{mpa} geschieht dies durch Hyperlinks. Über z. B. \pseudourl{http://www.example.com} wäre die Startseite der Webpräsenz zu erreichen, über \pseudourl{http://www.example.com/news} alle Neuigkeiten und hinter \pseudourl{http://www.example.com/about} könnte sich das Impressum verstecken, wie zum Beispiel in \autoref{img:navi-mpa} zu sehen. Jede Unterseite würde von einer Suchmaschine korrekt indiziert werden. Ein Hyperlink innerhalb einer \ac{spa} wurde oft mit einer Sprungmarke \cite{Consortium2016}, zu erkennen an der Raute (\#), versehen. Die Neuigkeiten wären nun über \pseudourl{http://www.example.com/index.html\#news} und das Impressum über \pseudourl{http://www.example.com/index.html\#about} zu erreichen. Die Navigationsstruktur aus \autoref{img:navi-mpa} würde nun wie in \autoref{img:navi-spa} aussehen.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.8\textwidth]{navi-spa.png}
+		\caption{Mögliche Navigationsstreukur in einer SPA}
+		\label{img:navi-spa}
+	\end{center}
+\end{figure}
+
+Alle Seiten einer \ac{spa} wurden von gängigen Suchmaschinen nur als eine Seite, also \pseudourl{http://www.example.com/index.html}, interpretiert. Bis Oktober 2015 empfahl Google, um dieses Problem zu umgehen, die Raute um ein Ausrufezeichen (!) zu ergänzen, womit sich ein Hyperlink der Form \pseudourl{http://www.example.com/\#!about} ergab. Der Crawler ersetzt nun die Zeichenkombination \quotes{\#!}, welche auch Shebang genannt wird, durch \quotes{?\_escaped\_fragment\_=}, was zu \ac{url}s wie zum Beispiel \pseudourl{http://www.example.com/?\_escaped\_fragment\_=about} führt. Der Crawler erwartet nun vom Server unter dieser \ac{url} eine reine HTML-Seite ohne JavaScript und mit den gleichen Inhalten, wie ein Besucher dies auch beim Aufruf von \pseudourl{http://www.example.com/\#!about} nach der Ausführung aller JavaScript-Anweisungen erhalten hätte.
+
+\paragraph{Lösung durch die pushState-Funktion}
+Die Indizierung durch Einsatz von Shebang funktioniert zwar noch, wird aber seit Oktober 2015 von Google offiziell nicht länger empfohlen. Anstelle dieser sollen Techniken und Methoden der progressiven Verbesserung Verwendungen finden, um Webpräsenzen auch zukünftig zuverlässig indizieren zu können. Hierbei kann unter anderem die in HTML5 eingeführte JavaScript-Funktion pushState Verwendung finden \cite{Google2015}. Diese Funktion kann den Browserverlauf manipulieren und diesem einen neuen Eintrag hinzuzufügen, ohne einen neuen HTTP-Request auszulösen. Bei dieser Technik werden Hyperlinks wieder im traditionellen Format angelegt, also z. B. auf \pseudourl{http://www.example.com/about}. Zur Verdeutlichung des Ablaufes soll \autoref{img:pushState} dienen.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=.5\textwidth]{pushState.png}
+		\caption{Ablauf des Webseitenwechsels in SPAs mit Verwendung der pushState-Funktion}
+		\label{img:pushState}
+	\end{center}
+\end{figure}
+
+Navigiert der Besucher nun von der Startseite auf das Impressum (\pseudourl{example.com/about}), wird der HTTP-Request abgefangen. Der benötigte Inhalt für das Impressum wird über \ac{ajax} geladen und in die Seite eingefügt. Im Anschluss wird durch die pushState-Funktion der Browserverlauf manipuliert. Nun ist der letzte Eintrag im Browserverlauf \pseudourl{http://www.example.com/news} und in der Adresszeile wird nun die vom Hyperlink angeforderte \ac{url} angezeigt. Für den Benutzer scheint es so, als ob er die alte HTML-Seite verlassen hätte und sich nun auf einer neuen befindet.\\
+Nun muss der Webserver noch so konfiguriert werden, dass alle Anfragen, die mit der Basis-\ac{url} der \ac{spa} beginnen, auf selbige umgeleitet werden, damit ein direkter Aufruf, zum Beispiel von einer externen Seite, funktioniert. Sowohl \pseudourl{http://www.example.com/news} als auch \pseudourl{http://www.example.com/about} würde der Server nun auf \pseudourl{http://www.example.com/} weiterleiten. Die \ac{spa} würde nun den Zusatz der ursprünglich angeforderten \ac{url} \pseudourl{/news} bzw. \pseudourl{/about} erkennen und den entsprechenden Inhalt darstellen. Durch diesen Trick kann nun der Google Crawler jede Webseite einer \ac{spa} durch eine eindeutige \ac{url} erreichen. \\
+Es ist somit darauf zu achten, dass das Framework korrekt von gängigen Suchmaschinen interpretiert wird und dass alle Webseiten durch Verwendung gültiger Links indiziert werden.

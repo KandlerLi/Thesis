@@ -1,0 +1,28 @@
+\subsubsection{Unterschied zu AngularJS}
+
+Eine Neuerung ist hier, neben einer anderen Syntax für Skripte und Templates, dass das gesamte Webframework unter anderem auch in TypeScript zur Verfügung gestellt wird. So stehen dem Entwickler einer Webanwendung neue Sprachelemente zur Verfügung. Da gängige Browser nativ kein TypeScript interpretieren können, ist es Voraussetzung, dieses zuerst mithilfe eines Transpilers in JavaScript umzuwandeln. \\
+Für bestehende, in AngularJS verfasste Anwendungen, wird eine Anleitung für die Migration in AngularJS2 angeboten. Diese ist jedoch mit Vorsicht zu verwenden, da die Migration von komplexeren Anwendungen sich zum Teil schwieriger gestaltet und nicht immer auf Anhieb funktioniert \cite{Google2016}. \\
+Wurden in AngularJS Module noch in einer eigenen Syntax geschrieben, sind diese nun als ECMAScript 6-Module verfasst. Controller und Service sind nun nicht mehr in JavaScript-Funktionen gekapselt, dafür kommen ECMAScript 6-Klassen. Die in AngularJS verwendeten Direktiven und Controller wurde durch Komponenten ersetzt \cite[S. 16]{Rangle.io2016}. \\
+Folgende Liste zeigt einen Ausschnitt der wichtigsten Änderungen.
+
+\begin{description}
+	\item[Template:] Die Syntax der Templates wurde geändert. So würde die Anweisung für die Datenbindung aus \autoref{lst:angularjs-databindung}, Zeile 9, nicht mehr \textit{ng-model=\grqq username\grqq}, lauten, sondern \textit{[(ngModel)]=\grqq username\grqq}.
+		
+	\item[Module:] Module in AngularJS2 entsprechen den ECMAScript 2015-Modulen.
+	
+	\item[Sytlesheets:] Jeder AngularJS2-Komponente können eigene CSS-Dateien zugewiesen werden. Diese sind nur innerhalb der Komponente gültig und haben keinerlei Auswirkungen auf andere Komponenten.
+\end{description}
+
+%Folgende \autoref{tab:ajsvsajs2} zeigt einige der wichtigen Änderung und Unterschiede.
+
+
+%\begin{longtable}{|c||c|c|}
+%	\hline  
+%	\backslashbox{Eigenschaft}{Framework}& AngularJS & AngularJS2 \\  \hhline{|=||=|=|}
+%	Templates & 98\% (Seit CH23+) & 98\%  \\ 
+%	\hline 
+%	
+%	\caption{Vergleich von AngularJS und AngularJS2}\label{tab:ajsvsajs2}
+%\end{longtable}
+
+Ein ausführlicher Vergleich beider Frameworks ist in der offiziellen Dokumentation von AngularJS2 zu finden \cite{Google2016b}.

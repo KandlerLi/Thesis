@@ -1,0 +1,43 @@
+%fehlt noch 
+\newcommand{\missing}[1]{\todo[color=red!40, inline]{#1}}
+%fehlt noch alles
+\newcommand{\missingall}{\todo[color=red!40, inline]{Fehlt komplett...}}
+%fehlt noch etwas
+\newcommand{\missingtext}{\todo[color=red!40, inline]{Mehr Text}}
+%fehlt Quelle
+\newcommand{\missingcite}{\todo[color=red!40, inline]{Quelle}}
+
+%Anführungszeichen
+\newcommand{\quotes}[1]{\glqq #1\grqq}
+%Anführungszeichen
+\newcommand{\fr}[1]{\frqq #1\flqq}
+
+%Linie referenzieren
+\newcommand{\lstnumberautorefname}{Linie}
+
+%url
+\newcommand{\pseudourl}[1]{\textit{\seqsplit{#1}}}
+
+%Datei- oder Order
+\newcommand{\filefolder}[1]{\texttt{\seqsplit{#1}}}
+
+%Url Präfix für Server A und Server B
+\newcommand{\serverA}[1][]{\pseudourl{http://aem.example.com/#1}~}
+\newcommand{\serverB}[1][]{\pseudourl{http://www.example.com:3000/spa/#1}~}
+
+%Unvollendete Kapitel hervorheben
+\newcommand{\chaptertbd}[1]{\chapter{\textcolor{red}{#1}}}
+\newcommand{\sectiontbd}[1]{\section{\textcolor{red}{#1}}}
+\newcommand{\subsectiontbd}[1]{\subsection{\textcolor{red}{#1}}}
+\newcommand{\subsubsectiontbd}[1]{\subsubsection{\textcolor{red}{#1}}}
+\newcommand{\paragraphtbd}[1]{\paragraph{\textcolor{red}{#1}}}
+
+%Tabellenköpfe hervorheben
+\newcommand{\thead}[1]{\textbf{#1}}
+
+%Name für AEM+WS Kombonente
+\newcommand{\ajc}{\ac{ajc}~}
+
+
+
+

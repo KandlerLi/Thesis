@@ -1,0 +1,9 @@
+\subsubsectiontbd{Verwendung als Clientlib}
+
+Besteht die Webanwendung lediglich aus JavaScript und Stylesheets, bestellt die Möglichkeit diese komplett als Clientlib umzusetzen.
+Hierfür wird wie in \autoref{sec:clientlib} beschrieben im \ac{jcr} eine entsprechende Struktur benötigt. Das Übertragen der App-Ressourcen in das \ac{jcr} kann über mehrere Wege erfolgen. \\
+
+\paragraphtbd{Transferieren der App-Ressourcen in das AEM}
+Zunächst lässt sich über die \ac{webdav}-Schnittstelle mit einem entsprechenden Programm die Struktur des \ac{jcr} anzeigen und bearbeiten. Neben dem Löschen und Verschieben von Knoten ist hier auch das Hochladen von lokalen Dateien möglich. \\
+Sofern die \ac{webdav}-Schnittstelle auf der Zielplattform nicht zugänglich sein sollte, weil diese zum Beispiel deaktiviert wurde, gibt es die Alternative die App-Ressourcen als \ac{crx}-Paket bereit zu stellen. Hierfür werden zunächst wieder alle Inhalte in das \ac{jcr}, zum Beispiel über \ac{webdav}, geladen, dieses mal jedoch in dem vom Entwickler. Anschließend kann über die Autoren-Bedienoberfläche, siehe \autoref{sec:autor_ui}, ein \ac{crx}-Paket erstellt werden. Dieses ist ein Zip-Archiv mit Metainformationen, wie Name und Version des \ac{crx}-Pakets.\\
+Das Erstellen eines \ac{crx}-Paketes erfolgt über eine entsprechende Seite des CRXDE Lite. Hier werden besagte Metainformationen gesetzt und alle benötigten Knoten für das \ac{crx}-Paket angegeben. Nun erfolgt der Export des \ac{crx}-Pakets. Ist dies geschehen wird das \ac{crx}-Paket in die Zielplattform importiert. Der Inhalt des \ac{crx}-Paketes wird nun in das \ac{jcr} geschrieben. Bereits bestehende Knoten werden bei diesem Vorgang ggf. überschrieben.
