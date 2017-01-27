@@ -1,0 +1,22 @@
+\subsection{Clientlib und Content-Ordner}
+Diese Kombination sieht vor, dass die App-Ressourcen in zwei Gruppen unterteilt werden. Zum einen wären hier alle App-Ressourcen, die bereits in der HTML-Seite referenziert sind, also zu Beginn geladen werden. Diese CSS- und JavaScript-Ressourcen werden als Clientlib realisiert. Zum anderen werden alle weiteren Ressourcen unter \pseudourl{/content} abgelegt. 
+Folgendes Beispiel zur Erklärung. Es wird angenommen, dass sich die \ajc unter \pseudourl{http://aem.example.com/content/app} befindet. Über die \ajc wurde bereits die Clientlib und somit die im ersten Schritt benötigten App-Ressourcen geladen. Nun wird über Ajax versucht eine JavaScript-Ressource unter der relativen \ac{url} \pseudourl{./templates/app.html} aufzurufen. Somit ergibt sich die absolute Adresse \pseudourl{http://aem.example.com/content/app/templates/app.html}, was innerhalb des \ac{jcr} die Knoten \pseudourl{/content/app/templates/app.html}. Der genaue Ablageknoten unter \pseudourl{/content} ist somit von der \ac{url} abhängig, unter dem die Webanwendung auffindbar sein soll.
+
+\subsubsection{Bewertung}
+
+Die Lösungskombination ist wie folgt zu bewerten.
+
+\begin{minipage}[t]{0.5\textwidth}
+	\textbf{Vorteile:}
+	\begin{itemize}
+		\item Schnell zu realisieren.
+		\item Keinerlei Anpassung der Webanwendung nötig. Relative Pfade werden korrekt aufgelöst.
+		\item Die Realisierung erfolgt als AJC, somit lässt sich diese frei innerhalb einer Webseite platzieren.
+	\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\textbf{Nachteile:}
+	\begin{itemize}
+		\item App-Ressoucen müssen innerhalb eines entsprechenden Knoten unter \pseudourl{/content} liegen. Wird die Anwendung in eine andere Webseite eingebettet, müssen die App-Ressourcen in einen anderen Knoten verschoben werden.
+	\end{itemize}
+\end{minipage}

@@ -1,0 +1,40 @@
+\subparagraph{HTML-Seite aufbereiten}
+\label{sec:html-seite-aufbereiten}
+Der erste Schritt dient dazu, die Einstiegsseite der Webanwendung anzufordern. \\
+Der Benutzer fordert hierbei zunächst die Webseite \serverA an. In dieser befindet sich die \ajc, an deren Stelle die Webanwendung von \serverB erscheinen soll.\\
+Nun wird im ersten Schritt \filefolder{AppBuilder.java} damit beauftragt, den HTML-Quellcode von \serverB anzufordern. \filefolder{AppBuilder.java} muss jetzt den erhaltenen HTML-Quellcode für die Integration aufbereiten. Einige dieser Aufbereitungsaufgaben sind anwendungsspezifisch und vom jeweils verwendeten Webframework abhängig. Mehr zu den Unterschieden ist dem \autoref{sec:aufbereitungsaufgabe} zu entnehmen. Was immer geschieht, ist, dass relative Referenzen auf JavaScript und CSS-Dateien durch absolute ersetzt werden. Eine Referenz auf \pseudourl{./app.module.js} sollte nach besagtem Schritt auf \serverB[app.module.js] verweisen.\\
+Der Quellcode von \serverB[index.html] könnte wie in \autoref{lst:serverB} aussehen.
+
+\begin{lstlisting}[style=htmlcssjs, caption=Ausgangssituation auf Server B, label=lst:serverB]
+<!DOCTYPE html>
+<html ng-app="phonecatAPP">
+	<head>
+		<link rel="stylesheet" href="app.css" />
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="app.module.js"></script>
+		<title>My Webbapplication</title>
+	</head>
+	<body>
+		<div class="view-container">
+			<div ng-view class="view-frame"></div>
+		</div>
+	</body>
+</html>
+\end{lstlisting}
+
+Aus der Aufbereitung würde ein Quellcode wie in \autoref{lst:serverA} resultieren.
+
+\begin{lstlisting}[style=htmlcssjs, caption=Aufbereiteter Quellcode, label=lst:serverA]
+<link rel="stylesheet" href="http://www.example.com:3000/spa/app.css" />
+<script src="http://www.example.com:3000/spa/bower_components/angular/angular.js"></script>
+<script src="http://www.example.com:3000/spa/app.module.js"></script>
+<div ng-app="phonecatApp">
+	<div class="view-container">
+		<div ng-view class="view-frame"></div>
+	</div>
+</div>
+
+\end{lstlisting}
+
+\ac{aem} setzt nun an die Stelle der \ajc den aufbereiteten Quellcode. Diese HTML-Seite ist nun fertig bearbeitet und wird wieder an den Client geliefert. \\
+\filefolder{AppBuilder.java} nutzt die Java-Bibliothek jsoup \cite{Hedley2016}. Dieser HTML-Parser bietet Klassen und Funktionen zum Laden, Traversieren und Manipulieren von HTML-Seiten an. Der \ac{dom} der geladenen \ac{html}-Seite kann mithilfe von \ac{css}-Selektoren nach HTML-Elementen, wie den Script- und Link-Elementen, durchsucht werden. Die Installation der Bibliothek zur Nutzung innerhalb von \ac{aem} erfolgt als OSGi-Bundle.

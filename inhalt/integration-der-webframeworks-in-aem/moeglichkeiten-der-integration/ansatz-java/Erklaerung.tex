@@ -1,6 +1,0 @@
-\subsubsectiontbd{Erklärung}
-
-In der Regel erfolgt das Laden einer Webanwendung wie in \autoref{sec:http} beschrieben in drei Schritten. Zunächst wird die HTML-Seite angefordert, anschließend wird der Quellcode der HTML-Seite nach weiteren App-Ressourcen durchsucht und auch diese geladen. Weitere App-Ressourcen werden nun über Ajax angefordert und vom Server retourniert. \\
-Es wird davon ausgegangen, dass die Schritte unter \serverB korrekt durchlaufen werden und somit die Webanwendung wie gewünscht im Browser erscheint. \\
-Innerhalb von \ac{aem} hat die \ac{aem}-Komponente die Aufgabe die Webanwendung vom Webserver zu laden. Dabei muss jedoch die HTML-Seite, die Ajax-Anfragen und ggf. auch weitere App-Ressourcen manipuliert werden. Die Komponente dient somit als Bindeglied zwischen \ac{aem} und dem Webserver.\\
-Zuvor muss jedoch der Webserver und die Webanwendung gewissen Anpassungen unterliegen. Diese werden in \autoref{sec:anpassen-des-webservers} und \autoref{sec:anpassen-der-webanwendung} beschrieben.

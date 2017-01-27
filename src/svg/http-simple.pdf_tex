@@ -48,13 +48,13 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.58606557)%
+  \begin{picture}(1,0.59016393)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{http-simple.pdf}}%
-    \put(0.40430328,0.33733607){\makebox(0,0)[b]{\smash{GET /index.html HTTP/1.1}}}%
-    \put(0.40430328,0.2389754){\makebox(0,0)[b]{\smash{Host: www.example.com}}}%
+    \put(0.40372952,0.34196721){\makebox(0,0)[b]{\smash{GET /index.html HTTP/1.1}}}%
+    \put(0.40372952,0.24360657){\makebox(0,0)[b]{\smash{Host: www.example.com}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{http-simple.pdf}}%
-    \put(0.78278689,0.48127049){\makebox(0,0)[b]{\smash{:Server}}}%
+    \put(0.78278689,0.48487705){\makebox(0,0)[b]{\smash{:Server}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{http-simple.pdf}}%
-    \put(0.41557378,0.12831966){\makebox(0,0)[b]{\smash{index.html}}}%
+    \put(0.41495902,0.13348361){\makebox(0,0)[b]{\smash{index.html}}}%
   \end{picture}%
 \endgroup%

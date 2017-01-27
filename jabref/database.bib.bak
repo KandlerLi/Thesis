@@ -535,12 +535,75 @@
   url    = {https://github.com/KandlerLi/Aurelia-Example},
 }
 
-@Book{,
+@Book{MorvilleRosenfeld2006,
   title     = {Information Architecture for the World Wide Web},
   publisher = {O'Reilly Verlag},
   year      = {2006},
   author    = {Peter Morville and Louis Rosenfeld},
   edition   = {3},
+}
+
+@Misc{W3C2014a,
+  author = {W3C},
+  title  = {Cross-Origin Resource Sharing},
+  month  = {jan},
+  year   = {2014},
+  url    = {https://www.w3.org/TR/cors/},
+}
+
+@Misc{Foundation2017,
+  author = {The Apache Software Foundation},
+  title  = {Apache Module mod\_headers},
+  month  = {jan},
+  year   = {2017},
+  url    = {http://httpd.apache.org/docs/2.0/mod/mod_headers.html},
+}
+
+@Misc{Foundation2017a,
+  author = {The Apache Software Foundation},
+  title  = {Apache Module mod\_rewrite},
+  month  = {jan},
+  year   = {2017},
+  url    = {http://httpd.apache.org/docs/current/mod/mod_rewrite.html},
+}
+
+@Misc{Stenberg2017,
+  author = {Daniel Stenberg},
+  title  = {curl - command line tool and library for transferring data with URLs},
+  month  = {jan},
+  year   = {2017},
+  url    = {https://curl.haxx.se/},
+}
+
+@Misc{Eisenberg2017,
+  author = {Rob Eisenberg},
+  title  = {Aurelia Docs - Quick Start},
+  month  = {jan},
+  year   = {2017},
+  url    = {http://aurelia.io/hub.html#/doc/article/aurelia/framework/latest/quick-start/},
+}
+
+@Misc{wcmio2017,
+  author = {wcmio},
+  title  = {grunt-aem-clientlib-generator},
+  month  = {jan},
+  year   = {2017},
+  url    = {https://www.npmjs.com/package/grunt-aem-clientlib-generator},
+}
+
+@Misc{Foundation2017b,
+  author = {Apache Software Foundation},
+  title  = {Apache Jackrabbit - Node Type Notation},
+  month  = {jan},
+  year   = {2017},
+}
+
+@Misc{,
+  author = {Adobe Systems Incorporated},
+  title  = {How to Build AEM Projects using Apache Maven},
+  month  = {jan},
+  year   = {2017},
+  url    = {https://docs.adobe.com/docs/en/aem/6-2/develop/dev-tools/ht-projects-maven.html},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

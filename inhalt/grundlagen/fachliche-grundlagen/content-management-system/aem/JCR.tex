@@ -1,6 +1,7 @@
 \paragraph{JCR}
+\index{JCR}
 \ac{aem} verwendet das \ac{api} des \ac{jcr}. Diese \ac{api} wird in der aktuellen Version 2.0 vom Java Community Process spezifiziert und unter der Bezeichnung JSR-283 veröffentlicht. Sie dient dazu, über standardisierte Schnittstellen auf Inhalte zuzugreifen. Der Austausch von Inhalten zwischen einzelnen Implementierungen von \ac{jcr} ist somit möglich. \\
-Bei \ac{jcr} sind Inhalte in Form von Knoten und Eigenschaften abgelegt. An der Spitze gibt es einen Wurzelknoten und jeder Knoten kann beliebig viele Kindknoten besitzen, womit eine Baumstruktur entsteht. Zudem kann jeder Knoten eine beliebige Anzahl an Eigenschaften besitzen, welche aus Name-Wert-Paaren bestehen. Jede Eigenschaft erhält einen Typ, der angibt, was für den Wert eingetragen werden darf, beispielsweise eine Zeichenkette (String) oder eine Zahl (Integer). An Eigenschaften können keine Kinder angehängt werden. Als Beispiel soll \autoref{img:dom} dienen.
+Bei \ac{jcr} sind Inhalte in Form von Knoten und Eigenschaften abgelegt. An der Spitze gibt es einen Wurzelknoten und jeder Knoten kann beliebig viele Kindknoten besitzen, womit eine Baumstruktur entsteht. Zudem kann jeder Knoten eine beliebige Anzahl an Eigenschaften besitzen, welche aus Name-Wert-Paaren bestehen. Jede Eigenschaft erhält einen Typ, der angibt, was für den Wert eingetragen werden darf, beispielsweise eine Zeichenkette (String) oder eine Zahl (Integer). An Eigenschaften können keine Kinder angehängt werden. Als Beispiel soll \autoref{img:jcr} dienen.
 
 \begin{figure}[H]
 	\begin{center}
@@ -10,7 +11,7 @@ Bei \ac{jcr} sind Inhalte in Form von Knoten und Eigenschaften abgelegt. An der 
 	\end{center}
 \end{figure}
 
-
+Eine \ac{jcr} Struktur lässt sich textuell mit der \ac{cnd}\index{cnd} darstellen, welche von der Apache Software Foundation definiert wird \cite{Foundation2017b}.
 Für diese Arbeit gilt, dass sich der Baum von \autoref{img:jcr} auch textuell wie folgt darstellen lässt.
 
 \begin{minipage}{\textwidth}
@@ -25,9 +26,9 @@ Für diese Arbeit gilt, dass sich der Baum von \autoref{img:jcr} auch textuell w
   + opt/
     - lastModified (Date) = 01.04.2014
     + lib/
-      - stringValue (String)= Lorem Ipsum
-      - ID = (String) 0x037AE
+      - stringValue (String) = Lorem Ipsum
+      - ID (String) = 0x037AE
 \end{lstlisting}
 \end{minipage}
 
-Somit entspricht ein Plus (+) einem Knoten, ein Minus (-) einer Eigenschaft und eine Einrückung einer tieferen Ebene in der Baumstruktur. Der Inhalt der Klammern bei den Eigenschaften gibt dessen Typ an. Alles hinter einer Raute (\#) dient als Kommentar für die textuelle Darstellung und ist im JCR nicht hinterlegt.
+Somit entspricht ein Plus (+) einem Knoten, ein Minus (-) einer Eigenschaft und eine Einrückung einer tieferen Ebene in der Baumstruktur. Der Inhalt der Klammern bei den Eigenschaften gibt dessen Typ an. Alles hinter einer Raute (\#) dient als Kommentar für die textuelle Darstellung und ist im \ac{jcr} nicht hinterlegt.

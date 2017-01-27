@@ -1,0 +1,20 @@
+\subsubsection{Bewertung}
+Die Lösung mit einem Proxy ist wie folgt zu bewerten.
+
+\begin{minipage}[t]{0.5\textwidth}
+	\textbf{Vorteile:}
+	\begin{itemize}
+		\item Die Struktur der Webanwendung bleibt erhalten.
+		\item Die Webanwendung ist unabhängig von \ac{aem} testbar.
+		\item Die entwickelte \ajc lässt sich wiederverwenden.
+		\item Die Logik des Skriptes ist weitestgehend frei wählbar und nicht von \ac{aem} abhängig.
+	\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\textbf{Nachteile:}
+	\begin{itemize}
+		\item Betreiben von zwei bzw. drei Diensten nötig (AEM und Webserver und Proxy).
+		\item Ggf. zusätzliche Konfiguration von Webserver und Webanwendung nötig.
+		\item Zusätzliche Laufzeit (gering, ggf. vernachlässigbar).
+	\end{itemize}
+\end{minipage}

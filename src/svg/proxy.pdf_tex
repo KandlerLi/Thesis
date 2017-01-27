@@ -1,0 +1,86 @@
+%% Creator: Inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'proxy.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{531.2bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.36746988)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{proxy.pdf}}%
+    \put(0.09186747,0.33584337){\makebox(0,0)[b]{\smash{:AEM-Server}}}%
+    \put(0.09186747,0.31475904){\makebox(0,0)[b]{\smash{bzw. AEM-}}}%
+    \put(0.09186747,0.2936747){\makebox(0,0)[b]{\smash{Komponente}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{proxy.pdf}}%
+    \put(0.40813253,0.31475904){\makebox(0,0)[b]{\smash{:Proxy-Server}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{proxy.pdf}}%
+    \put(0.66415663,0.3253012){\makebox(0,0)[b]{\smash{:Proxy-Script}}}%
+    \put(0.66415663,0.30421687){\makebox(0,0)[b]{\smash{(z. B. proxy.php)}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{proxy.pdf}}%
+    \put(0.2427259,0.25167169){\makebox(0,0)[b]{\smash{GET /app/templates/}}}%
+    \put(0.2427259,0.23058735){\makebox(0,0)[b]{\smash{news.html HTTP1.1}}}%
+    \put(0.2427259,0.20950301){\makebox(0,0)[b]{\smash{Host: \hostnameP}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{proxy.pdf}}%
+    \put(0.25010543,0.06460842){\makebox(0,0)[b]{\smash{Bearbeitete}}}%
+    \put(0.25010543,0.04352409){\makebox(0,0)[b]{\smash{App-Ressource}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{proxy.pdf}}%
+    \put(0.53614458,0.21528614){\makebox(0,0)[b]{\smash{path=}}}%
+    \put(0.53614458,0.1942018){\makebox(0,0)[b]{\smash{templates/news.html}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{proxy.pdf}}%
+    \put(0.53572289,0.08018073){\makebox(0,0)[b]{\smash{Bearbeitete}}}%
+    \put(0.53572289,0.05909639){\makebox(0,0)[b]{\smash{App-Ressource}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{proxy.pdf}}%
+    \put(0.71521083,0.09924698){\makebox(0,0)[lb]{\smash{App-Ressource}}}%
+    \put(0.71521083,0.07816264){\makebox(0,0)[lb]{\smash{bearbeiten}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{proxy.pdf}}%
+    \put(0.90597893,0.31475904){\makebox(0,0)[b]{\smash{:Webserver}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{proxy.pdf}}%
+    \put(0.78603915,0.22590361){\makebox(0,0)[b]{\smash{GET /static/vorlagen/}}}%
+    \put(0.78603915,0.20481928){\makebox(0,0)[b]{\smash{news.htm HTTP/1.1}}}%
+    \put(0.78603915,0.18373494){\makebox(0,0)[b]{\smash{Host: \hostnameB}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{proxy.pdf}}%
+    \put(0.79066265,0.14457831){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Originale App-Ressource}}}%
+  \end{picture}%
+\endgroup%

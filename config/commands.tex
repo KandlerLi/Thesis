@@ -21,9 +21,21 @@
 %Datei- oder Order
 \newcommand{\filefolder}[1]{\texttt{\seqsplit{#1}}}
 
-%Url Präfix für Server A und Server B
-\newcommand{\serverA}[1][]{\pseudourl{http://aem.example.com/#1}~}
-\newcommand{\serverB}[1][]{\pseudourl{http://www.example.com:3000/spa/#1}~}
+%Inline Code
+\newcommand{\inlinecode}[1]{\texttt{\seqsplit{#1}}}
+
+%Hostname für Server A und Server B und Proxy Server
+\newcommand{\hostnameA}{\pseudourl{aem.example.com}}
+\newcommand{\hostnameB}{\pseudourl{www.example.com:3000}}
+\newcommand{\hostnameP}{\pseudourl{cdn.example.com}}
+
+%Url Präfix für Server A und Server B und Proxy Server
+\newcommand{\serverA}[1][]{\pseudourl{http://\hostnameA/#1}~}
+\newcommand{\serverAN}[1][]{\pseudourl{http://\hostnameA/#1}}
+\newcommand{\serverB}[1][]{\pseudourl{http://\hostnameB/spa/#1}~}
+\newcommand{\serverBN}[1][]{\pseudourl{http://\hostnameB/spa/#1}}
+\newcommand{\serverP}[1][]{\pseudourl{http://\hostnameP/#1}~}
+\newcommand{\serverPN}[1][]{\pseudourl{http://\hostnameP/#1}}
 
 %Unvollendete Kapitel hervorheben
 \newcommand{\chaptertbd}[1]{\chapter{\textcolor{red}{#1}}}
@@ -31,6 +43,7 @@
 \newcommand{\subsectiontbd}[1]{\subsection{\textcolor{red}{#1}}}
 \newcommand{\subsubsectiontbd}[1]{\subsubsection{\textcolor{red}{#1}}}
 \newcommand{\paragraphtbd}[1]{\paragraph{\textcolor{red}{#1}}}
+\newcommand{\subparagraphtbd}[1]{\subparagraph{\textcolor{red}{#1}}}
 
 %Tabellenköpfe hervorheben
 \newcommand{\thead}[1]{\textbf{#1}}

@@ -1,0 +1,6 @@
+\subsubsection{Lösungsansatz \quotes{Content Ordner}}
+\label{sec:sol_content}
+Eine simple Lösung wäre es, die Webanwendung unter den Content-Ordner  abzulegen. \\
+Jeglicher Inhalt, der unter \filefolder{/content} abgelegt wird, ist direkt für den Client aufrufbar. Beispielsweise wäre unter der Standardkonfiguration von \ac{aem} die Datei \filefolder{/content/myapp/index.html} unter der \ac{url} \pseudourl{http://<Server-Hostname>:<AEM-Port>/content/myapp/index.html} erreichbar. Somit wäre es möglich, die Verzeichnisstruktur der Webanwendung 1:1 beizubehalten, sofern die komplette Webanwendung unter \filefolder{/content} abgelegt wird. Dieser Lösungsansatz verzichtet jedoch darauf, die Webanwendung als \ajc zu realisieren, was deren freie Positionierung und Konfigurierung über die Autoren-Bedienoberfläche ausschließt. Der Lösungsansatz \quotes{Content Ordner} empfiehlt sich somit nur für Webanwendungen, welche eine gesamte Webseite des \ac{aem} ausmachen und keine Konfiguration benötigen. 
+
+\input{inhalt/integration-der-webframeworks-in-aem/moeglichkeiten-der-integration/direkte-integration-in-das-aem/loesungsansatz-content-ordner/Bewertung} 

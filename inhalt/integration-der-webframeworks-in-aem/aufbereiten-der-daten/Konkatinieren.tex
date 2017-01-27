@@ -1,0 +1,21 @@
+\subsection{Konkatinierung und weitere Laufzeitoptimierung}
+\label{sec:konkat}
+Für den Produktiveinsatz lassen sich die Quelldateien konkatenieren. Hierbei wird die Anzahl der einzelnen Dateien minimiert, indem diese zu einer oder mehreren großen Dateien zusammengefügt werden. Dies minimiert die Übertragungszeit vom Server zum Client, da weniger HTTP-Request-Response-Zyklen durchlaufen werden müssen. Weiterhin existieren so auch weniger Dateien, die es in das \ac{aem} zu integrieren gilt, was zum Beispiel die direkte Integration, wie in \autoref{sec:direkte-integration-in-das-aem} beschrieben, erleichtert. \\
+Weiterhin lassen sich bei manchen Frameworks die HTML-Templates in JavaScript-Dateien umwandeln. Somit ist auch hier eine anschließende Minimierung und Komprimierung möglich.
+
+
+\begin{description}
+	\item[Allgemein] Generell existieren für die Konkatinierung von JavaScript-Quellcodes verschiedenste Werkzeuge. Auch hierfür lässt sich UglifyJS verwenden. Bei der Konkatenierung ist bei dessen Einsatz darauf zu achten, die JavaScript-Dateien in der korrekten Reihenfolge anzugeben, um Fehler in der Abhängigkeit zu vermeiden. \\
+	Um solche Abhängigkeitsfehler zu vermeiden lässt sich hier das Konzept der \ac{di} nutzen. Wurde die Webanwendung unter Verwendung von \ac{di} entwickelt, so ist in den JavaScript-Dateien bereits deren Abhängigkeit syntaktisch hinterlegt. Je nach Art der verwendeten \ac{di} darf der Entwickler auf unterschiedliche Werkzeuge zurückgreifen. Alle gängigen Bibliotheken aus \autoref{tab:dilist} liefern bereits Werkzeuge für die Konkatenierung mit.
+	
+	\item[AngularJS] Alle AngularJS-Templates, welche sich im Normalfall in einer jeweils eigenen HTML-Datei befinden, lassen sich in eine eigene JavaScript-Datei umzuwandeln. Als Werkzeug wird hier Grunt in Verbindung mit dem \ac{npm}-Paket namens \quotes{grunt-angular-template} \cite{Clemmons2016} verwendet. Dies nimmt die AngularJS-Templates und wandelt diese in eine JavaScript-Datei um, welche den Template-Cache \cite{Google2016c} von AngularJS nutzt.
+	
+	\item[AngularJS2] Im Gegensatz zum \ac{jit}-Ansatz, bei dem Skripte und App-Ressourcen erst dann geladen werden, wenn sie benötigt werden, wird beim \ac{aot}-Ansatz alles, was später benötigt werden könnte, zu Anfang geladen.  In der Dokumentation von AngularJS2 wird der \ac{aot}-Ansatz erklärt \cite{Google2016a} und wie dieser angewandt wird.
+	
+	\item[Aurelia] Auch Aurelia bietet ein derartiges Tool an. Dieses nutzt Gulp und ist über \ac{npm} mit dem Namen \quotes{aurelia-bundler} \cite{Aurelia2016} zu finden.
+	
+	\item[React] Um die Laufzeit der Webanwendung zu optimieren, kann man diese zuvor in eine normale JavaScript-Anweisung umwandeln. Hierfür empfiehlt sich der Einsatz von Babel \cite{Babel2016}. Das Werkzeug wird über \ac{npm} installiert, kann TypeScript und neueres ECMAScript in ECMAScript 3 und 5 umwandeln, und beherrscht auch \ac{jsx}. Die Umwandlung lässt sich manuell, oder auch wahlweise durch Gulp und Grunt anstoßen.
+	
+	
+	
+\end{description}

@@ -1,0 +1,15 @@
+\paragraph{Anpassen des Webservers}
+\label{sec:anpassen-des-webservers}
+Gängige Webbrowser verbieten, dass JavaScript und somit auch \ac{ajax} auf Web-Ressourcen anderer Webserver zugreifen dürfen, als dem, unter dem das Skript gerade ausgeführt wird. Grund dafür ist das Sicherheitskonzept der \acf{sop}\index{SOP}. Die Herkunft (eng. Origin) setzt sich hierbei aus dem verwendetem Protokoll, Hostname und Port der \ac{url} zusammen. Unterscheidet sich die Herkunft von der Webseite, von der aus die Anfrage gestartet wurde, und von der angefragten Web-Ressource, so wird die Anfrage vom Webbrowser geblockt. Im zuvor beschriebenen Beispiel würden sich \serverA und \serverB in dem Hostnamen (\pseudourl{www.example.com} anstelle von \pseudourl{aem.example.com}) und dem Port (\pseudourl{3000} anstelle vom Standardport für HTTP \pseudourl{80}) unterscheiden. Eine Ajax-Anfragen vom AEM-Server an den Webserver würde einen Fehler erzeugen.\\
+Damit der Zugriff doch funktioniert, lässt sich der von W3C definierte Mechanismus des \ac{cors} anwenden.
+
+\begin{figure}[H]
+	\begin{center}
+		\includesvg[width=1\textwidth]{cors}
+		\caption{Ablauf bei CORS}
+		\label{img:cors}
+	\end{center}
+\end{figure}
+Wie in \autoref{img:cors} sendet der Browser des Clients bei seiner Anfrage seine Herkunft (Origin) mit. Am Beispiel hier wäre die Herkunft die \ac{url} der Webseite, von der die Anfrage ausgeführt wird, also \serverAN. Der Server antwortet mit einer Liste von erlaubten Hostnamen und der angeforderten Web-Ressource. Der Browser überprüft nun, ob sich die Herkunft der Ajax-Anfrage in der Liste befindet. Im Erfolgsfall wird die Ajax-Anfrage erfolgreich beendet, ansonsten wird eine Fehlermeldung erzeugt. \\
+Neben der gezeigten Variante lässt sich \ac{cors}\index{CORS} auch mit anderen Zugriffsregeln verwenden. Durch \inlinecode{Access-Control-Allow-Origin: *} werden alle Anfragen genehmigt, durch \inlinecode{Access-Control-Allow-Methods: GET} werden alle mit der Zugriffsmethode GET gestellten Anfragen erfolgreich ausgeführt \cite{W3C2014a}. \\
+Die Konfiguration der erlaubten Herkünfte ist Webserverspezifisch und in der jeweiligen Dokumentation nachzulesen. Für Apache kann hier das Modul \quotes{mod\_headers} \cite{Foundation2017} genutzt werden.

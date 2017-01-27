@@ -1,0 +1,23 @@
+\subsubsection{Lösungsansatz \quotes{Java-Servlet}}
+\label{sec:ansatz-java}
+
+Hier ist die Grundidee, dass sich die App-Ressourcen nicht im \ac{jcr} des \ac{aem} befinden, sondern auf einem separaten Webserver vorliegen. Ziel ist es, dass die Webanwendung unabhängig auf dem separaten Webserver zum Testen lauffähig ist. Über eine \ac{aem}-Komponente wird diese in das \ac{aem} importiert. Die \ac{aem}-Komponente bezieht die App-Ressourcen vom Webserver und passt diese ggf. an, so dass die Webanwendung korrekt in der Webseite des \ac{aem} dargestellt wird, wie in \autoref{img:import} illustriert wird. Da auch diese \ac{aem}-Komponente eine Webanwendung abstrahiert, wird diese im Folgenden ebenfals als \ajc bezeichnet.
+
+\begin{figure}[H]
+	\begin{center}
+		\includesvg[width=1.0\textwidth]{import}
+		\caption{Integration vom Webserver in den AEM Server mittels einer \ajc}
+		\label{img:import}
+	\end{center}
+\end{figure}
+Dabei werden die App-Ressourcen zur Laufzeit der \ajc, also wenn die Webseite geladen wird, jeweils erneut vom Webserver geladen. Ein Ablegen in das \ac{jcr} ist nicht vorgesehen. Ein temporäres Zwischenspeichern (Cachen) wäre von Grund auf denkbar ist, wird innerhalb dieser Arbeit jedoch nicht weiter behandelt. \\
+Im Folgenden wird der separate Webserver, auf dem sich die App-Ressourcen für die Webanwendung befinden, kurz \quotes{Webserver} und der Server mit der lauffähigen \ac{aem}-Instanz kurz \quotes{\ac{aem}-Server} genannt. Die Integration erfolgt somit vom Webserver in den \ac{aem}-Server. Die Webanwendung ist über \serverB aufrufbar und soll später über den \ac{aem}-Server über \serverA erreichbar sein.\\
+
+\input{inhalt/integration-der-webframeworks-in-aem/moeglichkeiten-der-integration/integration-über-einen-zusätzlichen-webserver/ansatz-java/Erklaerung}
+\input{inhalt/integration-der-webframeworks-in-aem/moeglichkeiten-der-integration/integration-über-einen-zusätzlichen-webserver/ansatz-java/Anpassen-des-Webservers}
+\input{inhalt/integration-der-webframeworks-in-aem/moeglichkeiten-der-integration/integration-über-einen-zusätzlichen-webserver/ansatz-java/Anpassen-der-Webanwendung}
+\input{inhalt/integration-der-webframeworks-in-aem/moeglichkeiten-der-integration/integration-über-einen-zusätzlichen-webserver/ansatz-java/Ablauf-der-AEM-Komponente}
+\input{inhalt/integration-der-webframeworks-in-aem/moeglichkeiten-der-integration/integration-über-einen-zusätzlichen-webserver/ansatz-java/Aufbereitungsaufgabe-bei-unterschiedlichen-Webframeworks}
+%\input{inhalt/integration-der-webframeworks-in-aem/moeglichkeiten-der-integration/integration-über-einen-zusätzlichen-webserver/ansatz-java/Konfiguration}
+%\input{inhalt/integration-der-webframeworks-in-aem/moeglichkeiten-der-integration/integration-über-einen-zusätzlichen-webserver/ansatz-java/Varianten}
+\input{inhalt/integration-der-webframeworks-in-aem/moeglichkeiten-der-integration/integration-über-einen-zusätzlichen-webserver/ansatz-java/Bewertung}

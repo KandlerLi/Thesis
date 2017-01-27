@@ -1,16 +1,16 @@
 \section{Entwicklungsprozess und bestehende Problematiken}
-Das Ziel ist es, Webanwendungen, die mit clientseitigen Webframeworks entwickelt wurden, in Webseiten, die mit \ac{aem} entwickelt wurden, zu integrieren. Die Integration soll hierbei in Form einer \ajc erfolgen, um die Positionierung der Webanwendung innerhalb einer Webseite und dessen Konfiguration für Autoren zu vereinfachen. Wird diese in einer Webseite eingebunden, werden autonom alle benötigten Web-Ressourcen geladen und es wird gewährleistet, dass die clientseitige Webanwendung in der Webseite wie vorgesehen dargestellt wird. Der Entwicklungsprozess einer \ajc ist hierbei wie folgt vorgeben.
+Die Integration soll vorzugsweise in Form einer \ajc erfolgen, um die Positionierung der Webanwendung innerhalb einer Webseite und deren Konfiguration für Autoren zu vereinfachen. Wird diese in eine Webseite eingebunden, sollen ohne weiteres zutun alle benötigten App-Ressourcen geladen werden und es wird gewährleistet, dass die clientseitige Webanwendung in der Webseite wie vorgesehen dargestellt wird. Der Entwicklungsprozess von einer Webanwendung in eine \ajc ist hierbei wie folgt vorgegeben.
 
 \begin{description}
-	\item[1. Enwicklung der Webanwendung] Zunächst wird die Webanwendung innerhalb einer lokalen Entwicklungsumgebung unter Ausschluss einer \ac{aem}-Instanz entwickelt. Als Webserver hier dient zum Beispiel ein Apache HTTP Server oder ein Node.js Server.
-	\item[2. Enwicklung der \ajc] Nachdem die Webanwendung wie gewünscht funktioniert, wird diese zu einer \ajc angepasst. Dies geschieht jedoch nicht auf der Zielplattform, sondern innerhalb einer separaten \ac{aem}-Instanz, welche lokal für Entwicklungszwecke läuft.
-	\item[3. Auslieferung der \ajc] Sofern die \ajc fertig gestellt ist, wird diese an den Kunden ausgeliefert und schlussendlich von diesem auf die Zielplattform produktiv gestellt.
+	\item[1. Entwicklung der Webanwendung] Zunächst wird die Webanwendung innerhalb einer lokalen Entwicklungsumgebung außerhalb einer \ac{aem}-Instanz entwickelt. Als Webserver dient zum Beispiel ein Apache HTTP Server oder ein Node.js Server.
+	\item[2. Entwicklung der \ajc] Nachdem die Webanwendung wie gewünscht funktioniert, wird diese an eine \ajc angepasst. Dies geschieht jedoch nicht auf der Zielplattform, sondern innerhalb einer separaten \ac{aem}-Instanz, welche eigens für Entwicklungszwecke läuft.
+	\item[3. Auslieferung der \ajc] Sofern die \ajc fertiggestellt ist, wird diese an den Kunden ausgeliefert und schlussendlich von ihm produktiv auf die Zielplattform gestellt.
 \end{description}
 
 
 
 %Der Entwicklungsprozess sieht hierbei vor, dass zunächst die clientseitige Webanwendung unter Ausschluss einer \ac{aem}-Instanz entwickelt wird. Erst nach Fertigstellung wird diese als \ac{aem}-Komponente angepasst und ggf. erweitert, um beispielsweise die Konfigurierbarkeit innerhalb der Autoren-Bedienoberfläche zu ermöglichen. Abschließend erfolgt die Integration in die Zielplattform.\\
-Beim zweiten und dritten Schritt, also der Transformation einer Webanwendung in eine \ajc und dem Versuch der Integration können allerdings verschiedene Problematiken auftreten. Diese entstammen den Eigenschaften von \ac{aem} und den Webframeworks, aber auch durch gesetzte Rahmenbedingen und Restriktionen, welche die IT-Landschaft der Zielplattform und Integration betreffen. 
+Beim zweiten und dritten Schritt, also der Transformation einer Webanwendung in eine \ajc und den Versuch der Integration können allerdings verschiedene Problematiken auftreten. Diese entstammen den Eigenschaften von \ac{aem} und den Webframeworks, resultieren aber auch durch gesetzte Rahmenbedingen und Restriktionen, welche die IT-Landschaft der Zielplattform und Integration betreffen. 
 
 \input{inhalt/analyse-des-ist-zustand/bestehende-problematiken/IT-Landschaft-der-Zielplattform}
 \input{inhalt/analyse-des-ist-zustand/bestehende-problematiken/Bereitstellen-von-Ressourcen}

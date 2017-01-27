@@ -1,13 +1,9 @@
-%\newpage\missing{Stark überarbeiten}\definecolor{lightred}{RGB}{255,230,230}\pagecolor{lightred}
-
-\subsectiontbd{Direkte Integration in das AEM}
+\subsection{Direkte Integration in das AEM}
 \label{sec:direkte-integration-in-das-aem}
-Sofern der Zugriff auf das Ziel-\ac{aem}, insbesondere auf dessen \ac{jcr}-Strukur, besteht, lässt sich die Webanwendung direkt in selbiges durch die Verwendung von Clientlibs integrieren.\\
-Im ersten Schritt wird das gewünschte JavaScript-Framework als Clientlib, wie in \autoref{sec:clientlib} beschrieben, bereitgestellt. Sollte das Framework mehrmals Verwendung finden empfiehlt es sich dies unter /etc/clientlibs zu platzieren. \\
-Um die Bereitstellung der App-Ressourcen für die Webanwendung zu ermöglichen existieren mehrere Ansätze. Je nach verwendetem Framework lassen sich bestimmte Ansätze leichter erreichen.
+Innerhalb dieses Abschnittes sollen Lösungsansätze dargestellt werden, welche die direkte Integration in die \ac{jcr}-Struktur betreffen. Das bedeutet, dass alle benötigten App-Ressourcen in die \ac{jcr} abgelegt werden. Somit sind alle Ressourcen, die für die Ausführung der Webanwendung vonnöten sind, über das \ac{aem} erreichbar.\\
+%Sofern der Zugriff auf das Ziel-\ac{aem}, insbesondere auf dessen \ac{jcr}-Strukur, besteht, lässt sich die Webanwendung direkt in selbiges durch die Verwendung von Clientlibs integrieren.\\
+%Im ersten Schritt wird das gewünschte JavaScript-Framework als Clientlib, wie in \autoref{sec:clientlib} beschrieben, bereitgestellt. Sollte das Framework mehrmals innerhalb von \ac{aem} Verwendung finden, empfiehlt es sich dies unter \filefolder{/etc/clientlibs} zu platzieren, um global zur Verfügung zu stehen. Ansonsten wird das JavaScript-Framework in die zu entwickelnde \ajc abgelegt. \\
+Um die Bereitstellung der App-Ressourcen für die Webanwendung zu ermöglichen, wurden zwei Lösungsansätze erarbeitet. In der ersten Lösung werden alle App-Ressourcen in eine Clientlib gepackt. Die zweite sieht als Lösung vor, diese unter dem Content-Ordner abzulegen.
 
-\input{inhalt/integration-der-webframeworks-in-aem/moeglichkeiten-der-integration/direkte-integration-in-das-aem/Verwendung-als-Komponente}
-\input{inhalt/integration-der-webframeworks-in-aem/moeglichkeiten-der-integration/direkte-integration-in-das-aem/Content-Ordner}
-\input{inhalt/integration-der-webframeworks-in-aem/moeglichkeiten-der-integration/direkte-integration-in-das-aem/Hybride}
-
-%\newpage\pagecolor{white}
+\input{inhalt/integration-der-webframeworks-in-aem/moeglichkeiten-der-integration/direkte-integration-in-das-aem/Loesungsungsansatz-Clientlib}
+\input{inhalt/integration-der-webframeworks-in-aem/moeglichkeiten-der-integration/direkte-integration-in-das-aem/Loesungsansatz-Content-Ordner}

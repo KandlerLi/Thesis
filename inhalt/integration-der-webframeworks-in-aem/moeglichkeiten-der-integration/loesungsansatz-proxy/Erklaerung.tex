@@ -1,0 +1,23 @@
+\subsubsection{Erklärung}
+Die Lösung sieht hierbei vor, dass ein weiterer Webserver als Proxy unter dem Hostnamen \hostnameP~ so angepasst wird, dass dieser alle Anfragen wie in \autoref{img:proxy} über ein zentrales Skript umleitet. Besagtes Skript kann in einer beliebigen, vom Proxy unterstützten Programmiersprache realisiert werden, wie hier in \acs{php}. Die Konfiguration ließe sich beim Apache HTTP-Server mit dem Modul \quotes{mod\_rewrite} realisieren \cite{Foundation2017a}. Die entsprechende Konfiguration ist \autoref{lst:rewrite} zu entnehmen. \\
+\begin{minipage}{\textwidth}
+\begin{lstlisting}[style=jcr, caption=Konfiguration des mod\_rewrite Modules für den Proxy-Lösungsansatz, label=lst:rewrite]
+RewriteEngine on
+RewriteRule ^/app/(.*)$ /proxy.php?url=$1 [L]
+\end{lstlisting}
+\end{minipage}
+Der Ablauf könnte hierbei wie in \autoref{img:proxy} erfolgen. \\
+Die Konfiguration definiert, dass, sofern eine App-Ressource angefragt wird, deren Pfad mit \filefolder{/app/} beginnt, die Anfrage über \filefolder{proxy.php} umgeleitet wird. Der restliche Pfad, hier \filefolder{templates/news.html}, wird dem Skript als Parameter mit übergeben.\\
+Dieses ermittelt nun die benötigte App-Ressource vom eigentlichen Webserver, der unter dem Hostnamen und Port \pseudourl{www.exmaple.com:3000} zu erreichen ist. Etwaige Abweichungen vom angeforderten Pfad und der Pfad auf dem Webserver lassen sich über das Skript wie im Beispiel bewerkstelligen und korrigieren.\\
+Anschließend bearbeitet das Skript die App-Ressource entsprechend und liefert die bearbeitete App-Ressource als Ergebnis zurück. Diese Aktionen bleiben dem Client verborgen. Aus dessen Sicht wird ihm lediglich die angeforderte App-Ressource geliefert. \\
+
+\begin{figure}[H]
+	\begin{center}
+		{\footnotesize\includesvg[width=1.0\textwidth]{proxy}}
+		\caption{Funktionsweise des Proxy}
+		\label{img:proxy}
+	\end{center}
+\end{figure}
+
+Die Lösung ähnelt dem Servlet aus \autoref{sec:ansatz-java}, da auch hier zur Laufzeit Änderungen vorgenommen werden können.\\
+Seitens \ac{aem} kommt auch hier eine \ac{aem}-Komponente zum Einsatz, welche die initiale Anfrage an die HTML-Seite der Webanwendung stellt, was in etwa dem ersten Schritt aus \autoref{img:java} entspräche. Die Logik der \ajc vom Lösungsansatz \quotes{Java-Servlet} wird hier auf das Proxy-Skript ausgelagert. Innerhalb der \ac{aem}-Komponente wird lediglich die Start-URL des Proxy definiert.

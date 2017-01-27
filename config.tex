@@ -26,7 +26,7 @@
 \let\theauthor\@author
 \let\thesubject\@subject
 
-%Inhaltsverzeichnis in das Inhaltsverzeichnis
+%Inhaltsverzeichnis in das Inhaltsverzeichnisq
 \setuptoc{toc}{totoc}
 
 %Kapitel nicht einrücken
@@ -55,3 +55,7 @@
 }
 
 \graphicspath{{./src/img/}}
+\renewcommand{\lstnumberautorefname}{Zeile}
+
+%Abstände in Verzeichniseinträgen entfernen
+%\renewcommand*{\addvspace}[1]{}

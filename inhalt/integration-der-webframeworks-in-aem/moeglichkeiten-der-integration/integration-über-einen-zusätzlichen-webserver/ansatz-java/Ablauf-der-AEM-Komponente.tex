@@ -1,0 +1,15 @@
+\paragraph{Ablauf}
+Der ungefähre Ablauf ist \autoref{img:java} zu entnehmen. Dieser besteht grob zusammengefasst aus zwei Schritten. Der erste Schritt wird im folgenden \autoref{sec:html-seite-aufbereiten}, der zweite Schritt im darauf folgenden \autoref{sec:ajax-anfragen-anpassen} erklärt. \\
+Die beiden Java-Ressourcen \filefolder{AppBuilder.java} und \filefolder{GetData.java} lassen sich mit einem OSGi-Bundle für das \ac{aem} bereitstellen. Die JavaScript-Ressource \filefolder{ajaxdirect.js} lässt sich in einer \ajc in Verbindung mit einer Clientlib ausliefern. 
+Bei \filefolder{GetData.java} handelt es sich um ein Servlet. Das bedeutet, dass ein Browser dies über eine bestimmte \ac{url} aufrufen kann und eine entsprechende Antwort erhält.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{servlet.png}
+		\caption{Ungefährer Ablauf der AEM-Komponente auf Java-Basis}
+		\label{img:java}
+	\end{center}
+\end{figure}
+
+\input{inhalt/integration-der-webframeworks-in-aem/moeglichkeiten-der-integration/integration-über-einen-zusätzlichen-webserver/ansatz-java/ablauf-der-aem-komponente/HTML-Seite-aufbereiten}
+\input{inhalt/integration-der-webframeworks-in-aem/moeglichkeiten-der-integration/integration-über-einen-zusätzlichen-webserver/ansatz-java/ablauf-der-aem-komponente/Ajax-Anfragen-anpassen}

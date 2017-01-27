@@ -5,15 +5,37 @@
 
 \input{acro}
 
+
+\makeatletter
+\renewcommand\subparagraph{\@startsection{subparagraph}{4}{\z@}%
+	{-3.25ex \@plus -1ex \@minus -0.2ex}%
+	{0.01pt}%
+	{\raggedsection\normalfont\sectfont\nobreak\size@subparagraph}%
+}
+\makeatother
+
+
+
 %Zum Testen alle Bilder ausblenden
 %\renewcommand*\includegraphics[2][]{}
+%\renewcommand*\includesvg[2][]{}
 
 %\usepackage{helvet}
 %\renewcommand{\familydefault}{\sfdefault}
 
+
+\cfoot{}
+\hypersetup{colorlinks = false,pdfborder={0 0 0},}
+
+\makeindex
 \begin{document}
 
+
 \input{deckblatt}
+
+\RedeclareSectionCommand[
+beforeskip=-1\baselineskip,
+afterskip=.5\baselineskip]{chapter}
 
 \input{inhalt/Ehrenwoertliche-erklaerung}
 \input{inhalt/Vorwort}
@@ -21,9 +43,14 @@
 
 \newpage
 \tableofcontents
+
+\begingroup
+\renewcommand*{\addvspace}[1]{}
 \listoffigures
 \listoftables
 \lstlistoflistings
+\endgroup
+
 
 
 %\acsetup{
@@ -46,6 +73,12 @@
 \input{inhalt/Analyse-des-Ist-Zustand}
 \input{inhalt/Integration-der-Webframeworks-in-AEM}
 \input{inhalt/Zusammenfassung}
+
+%\newpage
+\renewcommand{\indexname}{Stichwortverzeichnis}
+\addcontentsline{toc}{chapter}{Stichwortverzeichnis}
+\printindex
+
 
 \bibliography{jabref/database}
 

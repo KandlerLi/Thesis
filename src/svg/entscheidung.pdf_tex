@@ -1,0 +1,100 @@
+%% Creator: Inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'entscheidung.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{610.4bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.39449541)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{entscheidung.pdf}}%
+    \put(0.3774574,0.23984273){\makebox(0,0)[b]{\smash{Sollen die}}}%
+    \put(0.3774574,0.2214941){\makebox(0,0)[b]{\smash{App-Ressourcen}}}%
+    \put(0.3774574,0.20314548){\makebox(0,0)[b]{\smash{in das AEM?}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{entscheidung.pdf}}%
+    \put(0.14809961,0.17496723){\makebox(0,0)[b]{\smash{Soll die App }}}%
+    \put(0.14809961,0.15661861){\makebox(0,0)[b]{\smash{konfigurierbar sein?}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{entscheidung.pdf}}%
+    \put(0.6068152,0.17496723){\makebox(0,0)[b]{\smash{Soll die Integration}}}%
+    \put(0.6068152,0.15661861){\makebox(0,0)[b]{\smash{mit Java erfolgen?}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{entscheidung.pdf}}%
+    \put(0.10878113,0.04849279){\makebox(0,0)[b]{\smash{Clientlib}}}%
+    \put(0.10878113,0.03014417){\makebox(0,0)[b]{\smash{ Abschnitt \ref{sec:sol_clientlib}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{entscheidung.pdf}}%
+    \put(0.30537353,0.04849279){\makebox(0,0)[b]{\smash{Content-Ordner}}}%
+    \put(0.30537353,0.03014417){\makebox(0,0)[b]{\smash{Abschnitt \ref{sec:sol_content}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{entscheidung.pdf}}%
+    \put(0.50196592,0.04849279){\makebox(0,0)[b]{\smash{Java-Servlet}}}%
+    \put(0.50196592,0.03014417){\makebox(0,0)[b]{\smash{Abschnitt \ref{sec:ansatz-java}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{entscheidung.pdf}}%
+    \put(0.69855832,0.04849279){\makebox(0,0)[b]{\smash{JavaScript}}}%
+    \put(0.69855832,0.03014417){\makebox(0,0)[b]{\smash{Abschnitt \ref{sec:ansatz-javascript}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{entscheidung.pdf}}%
+    \put(0.28806028,0.18432503){\makebox(0,0)[b]{\smash{Ja}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{entscheidung.pdf}}%
+    \put(0.48368281,0.20251639){\makebox(0,0)[b]{\smash{Nein}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{entscheidung.pdf}}%
+    \put(0.14195281,0.10117955){\makebox(0,0)[b]{\smash{Ja}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{entscheidung.pdf}}%
+    \put(0.22132372,0.105557){\makebox(0,0)[b]{\smash{Nein}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{entscheidung.pdf}}%
+    \put(0.55418086,0.10217563){\makebox(0,0)[b]{\smash{Ja}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{entscheidung.pdf}}%
+    \put(0.65254261,0.1023198){\makebox(0,0)[b]{\smash{Nein}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{entscheidung.pdf}}%
+    \put(0.89842726,0.04849279){\makebox(0,0)[b]{\smash{Proxy}}}%
+    \put(0.89842726,0.03014417){\makebox(0,0)[b]{\smash{Abschnitt \ref{sec:sol_proxy}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{entscheidung.pdf}}%
+    \put(0.59108781,0.34076016){\makebox(0,0)[b]{\smash{Integration}}}%
+    \put(0.59108781,0.32241153){\makebox(0,0)[b]{\smash{steuerbar}}}%
+    \put(0.59108781,0.30406291){\makebox(0,0)[b]{\smash{über zentrales}}}%
+    \put(0.59108781,0.28571429){\makebox(0,0)[b]{\smash{Skript?}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{entscheidung.pdf}}%
+    \put(0.4893578,0.26973787){\makebox(0,0)[b]{\smash{Ja}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{entscheidung.pdf}}%
+    \put(0.67917434,0.23634338){\makebox(0,0)[b]{\smash{Nein}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{entscheidung.pdf}}%
+  \end{picture}%
+\endgroup%

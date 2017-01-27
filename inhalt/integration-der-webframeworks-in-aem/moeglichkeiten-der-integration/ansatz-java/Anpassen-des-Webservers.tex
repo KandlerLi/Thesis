@@ -1,7 +1,0 @@
-\subsubsectiontbd{Anpassen des Webservers}
-\label{sec:anpassen-des-webservers}
-Gängige Webbrowser verbieten, dass JavaScript, und somit auch \ac{ajax}, auf externe Webserver zugreifen dürfen. Grund dafür ist das Sicherheitskonzept der \ac{sop}. \\
-Unterscheiden sich die \ac{url} von der Webseite von der aus die Anfrage gestartet wurde und vom Ziel in Protokoll, Domain oder Port, so wird die Anfrage vom Webbrowser geblockt. Im zuvor beschriebenen Beispiel würden sich \serverA und \serverB im Host (www.example.com anstelle von aem.example.com) und dem Port (3000 anstelle von 80) unterscheiden. \\
-Damit der Zugriff doch funktioniert lässt sich der Mechanismus des \ac{cors} verwenden.
-\missing{CORS etwas detailierter erklären}
-Hierfür antwortet der Zielwebserver der Anfrage mit einen entsprechenden HTTP-Header. Hier sind alle URLs gelistet, von denen gestattet sind eine Anfrage zu auszuführen. Der Browser vergleicht jetzt den HTTP-Header mit der URL, von dem die Anfrage gestartet wurde. Im Erfolgsfall blockiert der Browser nicht und der Aufruf wird zu Ende ausgeführt.

@@ -1,16 +1,16 @@
 \select@language {ngerman}
-\contentsline {chapter}{\nonumberline Inhaltsverzeichnis}{iv}{chapter*.6}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{viii}{chapter*.7}
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{ix}{chapter*.8}
-\contentsline {chapter}{\nonumberline Codebeispielverzeichnis}{x}{chapter*.9}
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{x}{chapter*.9}
+\contentsline {chapter}{\nonumberline Inhaltsverzeichnis}{iv}{chapter*.4}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{viii}{chapter*.5}
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{ix}{chapter*.6}
+\contentsline {chapter}{\nonumberline Codebeispielverzeichnis}{x}{chapter*.7}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{x}{chapter*.7}
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Zielsetzung}{2}{section.1.2}
-\contentsline {section}{\numberline {1.3}\leavevmode {\color {red}Aufgaben}}{2}{section.1.3}
+\contentsline {section}{\numberline {1.3}Aufgaben}{2}{section.1.3}
 \contentsline {section}{\numberline {1.4}Aufbau der Arbeit}{3}{section.1.4}
 \contentsline {chapter}{\numberline {2}Grundlagen}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}\leavevmode {\color {red}Begriffsdefinitionen}}{4}{section.2.1}
+\contentsline {section}{\numberline {2.1}Begriffsdefinitionen}{4}{section.2.1}
 \contentsline {section}{\numberline {2.2}Technische Grundlagen}{6}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}HTML}{6}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}CSS}{7}{subsection.2.2.2}
@@ -18,102 +18,119 @@
 \contentsline {subsection}{\numberline {2.2.4}TypeScript}{11}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}Webserver}{11}{subsection.2.2.5}
 \contentsline {subsection}{\numberline {2.2.6}URL}{11}{subsection.2.2.6}
-\contentsline {subsection}{\numberline {2.2.7}Servlet}{12}{subsection.2.2.7}
-\contentsline {subsection}{\numberline {2.2.8}HTTP}{12}{subsection.2.2.8}
-\contentsline {subsection}{\numberline {2.2.9}Ajax}{14}{subsection.2.2.9}
-\contentsline {subsection}{\numberline {2.2.10}XML und JSON}{14}{subsection.2.2.10}
-\contentsline {section}{\numberline {2.3}Fachliche Grundlagen}{15}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Webanwendung}{16}{subsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.1.1}Serverseitige Webanwendungen}{16}{subsubsection.2.3.1.1}
-\contentsline {subsubsection}{\numberline {2.3.1.2}Clientseitige Webanwendungen}{18}{subsubsection.2.3.1.2}
-\contentsline {subsubsection}{\numberline {2.3.1.3}Single-Page-Webanwendung}{19}{subsubsection.2.3.1.3}
-\contentsline {subsection}{\numberline {2.3.2}Framework / Bibliothek}{19}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}MV*-Architekturmuster}{19}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Content Management System}{21}{subsection.2.3.4}
-\contentsline {subsubsection}{\numberline {2.3.4.1}Adobe Experience Manager}{21}{subsubsection.2.3.4.1}
-\contentsline {paragraph}{\numberline {2.3.4.1.1}JCR}{22}{paragraph.2.3.4.1.1}
-\contentsline {paragraph}{\numberline {2.3.4.1.2}CRX}{24}{paragraph.2.3.4.1.2}
-\contentsline {paragraph}{\numberline {2.3.4.1.3}OSGi und Apache Felix}{24}{paragraph.2.3.4.1.3}
-\contentsline {paragraph}{\numberline {2.3.4.1.4}Apache Sling}{24}{paragraph.2.3.4.1.4}
-\contentsline {paragraph}{\numberline {2.3.4.1.5}Autoren-Bedienoberfl\IeC {\"a}che}{26}{paragraph.2.3.4.1.5}
-\contentsline {paragraph}{\numberline {2.3.4.1.6}Administrator Bedienoberfl\IeC {\"a}che}{27}{paragraph.2.3.4.1.6}
-\contentsline {paragraph}{\numberline {2.3.4.1.7}AEM-Anwendung}{28}{paragraph.2.3.4.1.7}
-\contentsline {paragraph}{\numberline {2.3.4.1.8}HTL}{29}{paragraph.2.3.4.1.8}
-\contentsline {paragraph}{\numberline {2.3.4.1.9}Komponenten}{29}{paragraph.2.3.4.1.9}
-\contentsline {paragraph}{\numberline {2.3.4.1.10}Clientlib}{30}{paragraph.2.3.4.1.10}
-\contentsline {chapter}{\numberline {3}Webframeworks}{32}{chapter.3}
-\contentsline {section}{\numberline {3.1}Werkzeuge und Techniken}{32}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Node.js}{32}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Paketverwaltung}{32}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Automatisierungswerkzeuge}{33}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}Modularisierung und Verwaltung von Abh\IeC {\"a}ngigkeiten}{33}{subsection.3.1.4}
-\contentsline {section}{\numberline {3.2}Anforderungen}{34}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Browserunterst\IeC {\"u}tzung}{34}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Integration}{35}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Indizierung von Suchmaschinen}{35}{subsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.3.1}Funktionsweise einer Suchmaschine}{35}{subsubsection.3.2.3.1}
-\contentsline {subsubsection}{\numberline {3.2.3.2}Probleme bei Single-Page-Webanwendungen}{36}{subsubsection.3.2.3.2}
-\contentsline {paragraph}{\numberline {3.2.3.2.1}Nachladen mit JavaScript}{36}{paragraph.3.2.3.2.1}
-\contentsline {paragraph}{\numberline {3.2.3.2.2}Hyperlinks innerhalb der SPA}{36}{paragraph.3.2.3.2.2}
-\contentsline {paragraph}{\numberline {3.2.3.2.3}L\IeC {\"o}sung durch die pushState-Funktion}{37}{paragraph.3.2.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Lizenz}{39}{subsection.3.2.4}
-\contentsline {section}{\numberline {3.3}Auswahl \& Bewertung}{39}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}AngularJS}{39}{subsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.1.1}Datenbindung}{39}{subsubsection.3.3.1.1}
-\contentsline {subsubsection}{\numberline {3.3.1.2}Module}{40}{subsubsection.3.3.1.2}
-\contentsline {subsubsection}{\numberline {3.3.1.3}Service}{40}{subsubsection.3.3.1.3}
-\contentsline {subsubsection}{\numberline {3.3.1.4}Dependency-Injection}{41}{subsubsection.3.3.1.4}
-\contentsline {subsubsection}{\numberline {3.3.1.5}Templates}{41}{subsubsection.3.3.1.5}
-\contentsline {subsubsection}{\numberline {3.3.1.6}Direktiven}{41}{subsubsection.3.3.1.6}
-\contentsline {subsubsection}{\numberline {3.3.1.7}Scopes}{41}{subsubsection.3.3.1.7}
-\contentsline {subsection}{\numberline {3.3.2}AngularJS2}{42}{subsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.2.1}Unterschied zu AngularJS}{42}{subsubsection.3.3.2.1}
-\contentsline {subsubsection}{\numberline {3.3.2.2}Komponenten}{43}{subsubsection.3.3.2.2}
-\contentsline {subsubsection}{\numberline {3.3.2.3}Performance}{43}{subsubsection.3.3.2.3}
-\contentsline {subsubsection}{\numberline {3.3.2.4}Datenbindung}{43}{subsubsection.3.3.2.4}
-\contentsline {subsection}{\numberline {3.3.3}Aurelia}{44}{subsection.3.3.3}
-\contentsline {subsubsection}{\numberline {3.3.3.1}Sprachen}{44}{subsubsection.3.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.3.2}Templates}{44}{subsubsection.3.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.3.3}Dependency Injection}{44}{subsubsection.3.3.3.3}
-\contentsline {subsubsection}{\numberline {3.3.3.4}Support}{45}{subsubsection.3.3.3.4}
-\contentsline {subsection}{\numberline {3.3.4}React}{45}{subsection.3.3.4}
-\contentsline {subsubsection}{\numberline {3.3.4.1}Virtueller DOM}{45}{subsubsection.3.3.4.1}
-\contentsline {subsubsection}{\numberline {3.3.4.2}JSX}{45}{subsubsection.3.3.4.2}
-\contentsline {subsection}{\numberline {3.3.5}Vergleich}{46}{subsection.3.3.5}
-\contentsline {chapter}{\numberline {4}Analyse des Ist-Zustand}{48}{chapter.4}
-\contentsline {section}{\numberline {4.1}Ziel}{48}{section.4.1}
-\contentsline {section}{\numberline {4.2}Entwicklungsprozess und bestehende Problematiken}{49}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}IT-Landschaft der Zielplattform}{50}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}\leavevmode {\color {red}Bereitstellen von Web-Ressourcen}}{50}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}\leavevmode {\color {red}Konflikte mit anderen Skripten}}{51}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}\leavevmode {\color {red}Anforderungen}}{51}{section.4.3}
-\contentsline {chapter}{\numberline {5}Integration der Webframeworks in AEM}{53}{chapter.5}
-\contentsline {section}{\numberline {5.1}Rahmenbedingungen}{53}{section.5.1}
-\contentsline {section}{\numberline {5.2}Zu untersuchende Frameworks}{53}{section.5.2}
-\contentsline {section}{\numberline {5.3}\leavevmode {\color {red}Zu integrierende Webanwendungen}}{53}{section.5.3}
-\contentsline {section}{\numberline {5.4}Aufbereiten der Daten}{54}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Minimierung}{54}{subsection.5.4.1}
-\contentsline {section}{\numberline {5.5}M\IeC {\"o}glichkeiten der Integration}{55}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}\leavevmode {\color {red}Direkte Integration in das AEM}}{56}{subsection.5.5.1}
-\contentsline {subsubsection}{\numberline {5.5.1.1}\leavevmode {\color {red}Verwendung als Clientlib}}{56}{subsubsection.5.5.1.1}
-\contentsline {paragraph}{\numberline {5.5.1.1.1}\leavevmode {\color {red}Transferieren der App-Ressourcen in das AEM}}{56}{paragraph.5.5.1.1.1}
-\contentsline {subsubsection}{\numberline {5.5.1.2}\leavevmode {\color {red}Content Ordner}}{57}{subsubsection.5.5.1.2}
-\contentsline {subsubsection}{\numberline {5.5.1.3}\leavevmode {\color {red}Hybride}}{57}{subsubsection.5.5.1.3}
-\contentsline {subsection}{\numberline {5.5.2}\leavevmode {\color {red}Ansatz Java}}{57}{subsection.5.5.2}
-\contentsline {subsubsection}{\numberline {5.5.2.1}\leavevmode {\color {red}Erkl\IeC {\"a}rung}}{57}{subsubsection.5.5.2.1}
-\contentsline {subsubsection}{\numberline {5.5.2.2}\leavevmode {\color {red}Anpassen des Webservers}}{58}{subsubsection.5.5.2.2}
-\contentsline {subsubsection}{\numberline {5.5.2.3}\leavevmode {\color {red}Anpassen der Webanwendung}}{59}{subsubsection.5.5.2.3}
-\contentsline {subsubsection}{\numberline {5.5.2.4}\leavevmode {\color {red}Ablauf der AEM-Komponente}}{59}{subsubsection.5.5.2.4}
-\contentsline {paragraph}{\numberline {5.5.2.4.1}\leavevmode {\color {red}HTML-Seite aufbereiten}}{60}{paragraph.5.5.2.4.1}
-\contentsline {paragraph}{\numberline {5.5.2.4.2}\leavevmode {\color {red}Ajax-Anfragen anpassen}}{61}{paragraph.5.5.2.4.2}
-\contentsline {subsubsection}{\numberline {5.5.2.5}\leavevmode {\color {red}Aufbereitungsaufgabe bei unterschiedlichen Frameworks}}{62}{subsubsection.5.5.2.5}
-\contentsline {subsubsection}{\numberline {5.5.2.6}\leavevmode {\color {red}Konfiguration}}{62}{subsubsection.5.5.2.6}
-\contentsline {subsubsection}{\numberline {5.5.2.7}\leavevmode {\color {red}Varianten}}{62}{subsubsection.5.5.2.7}
-\contentsline {subsection}{\numberline {5.5.3}\leavevmode {\color {red}Ansatz JavaScript}}{62}{subsection.5.5.3}
-\contentsline {section}{\numberline {5.6}\leavevmode {\color {red}Proxy}}{62}{section.5.6}
-\contentsline {section}{\numberline {5.7}\leavevmode {\color {red}Suchmaschinen}}{63}{section.5.7}
-\contentsline {section}{\numberline {5.8}\leavevmode {\color {red}Bewertung der L\IeC {\"o}sungen}}{64}{section.5.8}
-\contentsline {chapter}{\numberline {6}\leavevmode {\color {red}Zusammenfassung}}{66}{chapter.6}
-\contentsline {section}{\numberline {6.1}\leavevmode {\color {red}Fazit}}{66}{section.6.1}
-\contentsline {section}{\numberline {6.2}\leavevmode {\color {red}Ausblick}}{66}{section.6.2}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{67}{chapter*.24}
+\contentsline {subsection}{\numberline {2.2.7}Servlet}{13}{subsection.2.2.7}
+\contentsline {subsection}{\numberline {2.2.8}HTTP}{13}{subsection.2.2.8}
+\contentsline {subsection}{\numberline {2.2.9}Ajax}{15}{subsection.2.2.9}
+\contentsline {subsection}{\numberline {2.2.10}XML und JSON}{15}{subsection.2.2.10}
+\contentsline {section}{\numberline {2.3}Fachliche Grundlagen}{17}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Webanwendung}{17}{subsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.1.1}Serverseitige Webanwendungen}{18}{subsubsection.2.3.1.1}
+\contentsline {subsubsection}{\numberline {2.3.1.2}Clientseitige Webanwendungen}{19}{subsubsection.2.3.1.2}
+\contentsline {subsubsection}{\numberline {2.3.1.3}Single-Page-Webanwendung}{20}{subsubsection.2.3.1.3}
+\contentsline {subsection}{\numberline {2.3.2}Framework / Bibliothek}{20}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}MV*-Architekturmuster}{21}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Content Management System}{22}{subsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.4.1}Adobe Experience Manager}{22}{subsubsection.2.3.4.1}
+\contentsline {paragraph}{\numberline {2.3.4.1.1}JCR}{23}{paragraph.2.3.4.1.1}
+\contentsline {paragraph}{\numberline {2.3.4.1.2}CRX}{25}{paragraph.2.3.4.1.2}
+\contentsline {paragraph}{\numberline {2.3.4.1.3}OSGi und Apache Felix}{25}{paragraph.2.3.4.1.3}
+\contentsline {paragraph}{\numberline {2.3.4.1.4}Apache Sling}{25}{paragraph.2.3.4.1.4}
+\contentsline {paragraph}{\numberline {2.3.4.1.5}Autoren-Bedienoberfl\IeC {\"a}che}{27}{paragraph.2.3.4.1.5}
+\contentsline {paragraph}{\numberline {2.3.4.1.6}Administrator Bedienoberfl\IeC {\"a}che}{28}{paragraph.2.3.4.1.6}
+\contentsline {paragraph}{\numberline {2.3.4.1.7}AEM-Anwendung}{29}{paragraph.2.3.4.1.7}
+\contentsline {paragraph}{\numberline {2.3.4.1.8}HTL}{30}{paragraph.2.3.4.1.8}
+\contentsline {paragraph}{\numberline {2.3.4.1.9}Komponenten}{30}{paragraph.2.3.4.1.9}
+\contentsline {paragraph}{\numberline {2.3.4.1.10}Clientlib}{31}{paragraph.2.3.4.1.10}
+\contentsline {chapter}{\numberline {3}Webframeworks}{33}{chapter.3}
+\contentsline {section}{\numberline {3.1}Werkzeuge und Techniken}{33}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Node.js}{33}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Paketverwaltung}{33}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Automatisierungswerkzeuge}{34}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Modularisierung und Verwaltung von Abh\IeC {\"a}ngigkeiten}{34}{subsection.3.1.4}
+\contentsline {section}{\numberline {3.2}Anforderungen}{35}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Browserunterst\IeC {\"u}tzung}{35}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Integration}{36}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Indizierung von Suchmaschinen}{36}{subsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.3.1}Funktionsweise einer Suchmaschine}{36}{subsubsection.3.2.3.1}
+\contentsline {subsubsection}{\numberline {3.2.3.2}Probleme bei Single-Page-Webanwendungen}{37}{subsubsection.3.2.3.2}
+\contentsline {paragraph}{\numberline {3.2.3.2.1}Nachladen mit JavaScript}{37}{paragraph.3.2.3.2.1}
+\contentsline {paragraph}{\numberline {3.2.3.2.2}Hyperlinks innerhalb der SPA}{37}{paragraph.3.2.3.2.2}
+\contentsline {paragraph}{\numberline {3.2.3.2.3}L\IeC {\"o}sung durch die pushState-Funktion}{38}{paragraph.3.2.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Lizenz}{40}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}Auswahl \& Bewertung}{40}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}AngularJS}{40}{subsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.1.1}Datenbindung}{40}{subsubsection.3.3.1.1}
+\contentsline {subsubsection}{\numberline {3.3.1.2}Module}{41}{subsubsection.3.3.1.2}
+\contentsline {subsubsection}{\numberline {3.3.1.3}Service}{41}{subsubsection.3.3.1.3}
+\contentsline {subsubsection}{\numberline {3.3.1.4}Dependency-Injection}{42}{subsubsection.3.3.1.4}
+\contentsline {subsubsection}{\numberline {3.3.1.5}Templates}{42}{subsubsection.3.3.1.5}
+\contentsline {subsubsection}{\numberline {3.3.1.6}Direktiven}{42}{subsubsection.3.3.1.6}
+\contentsline {subsubsection}{\numberline {3.3.1.7}Scopes}{42}{subsubsection.3.3.1.7}
+\contentsline {subsection}{\numberline {3.3.2}AngularJS2}{43}{subsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.2.1}Unterschied zu AngularJS}{43}{subsubsection.3.3.2.1}
+\contentsline {subsubsection}{\numberline {3.3.2.2}Komponenten}{44}{subsubsection.3.3.2.2}
+\contentsline {subsubsection}{\numberline {3.3.2.3}Performance}{44}{subsubsection.3.3.2.3}
+\contentsline {subsubsection}{\numberline {3.3.2.4}Datenbindung}{44}{subsubsection.3.3.2.4}
+\contentsline {subsection}{\numberline {3.3.3}Aurelia}{45}{subsection.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.3.1}Sprachen}{45}{subsubsection.3.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.3.2}Templates}{45}{subsubsection.3.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3.3}Dependency Injection}{45}{subsubsection.3.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.3.4}Support}{46}{subsubsection.3.3.3.4}
+\contentsline {subsection}{\numberline {3.3.4}React}{46}{subsection.3.3.4}
+\contentsline {subsubsection}{\numberline {3.3.4.1}Virtueller DOM}{46}{subsubsection.3.3.4.1}
+\contentsline {subsubsection}{\numberline {3.3.4.2}JSX}{46}{subsubsection.3.3.4.2}
+\contentsline {subsection}{\numberline {3.3.5}Vergleich}{47}{subsection.3.3.5}
+\contentsline {chapter}{\numberline {4}Analyse des Ist-Zustandes}{49}{chapter.4}
+\contentsline {section}{\numberline {4.1}Ziel}{49}{section.4.1}
+\contentsline {section}{\numberline {4.2}Entwicklungsprozess und bestehende Problematiken}{50}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}IT-Landschaft der Zielplattform}{51}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Bereitstellen von Web-Ressourcen}{51}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Konflikte mit anderen Skripten}{52}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Anforderungen}{52}{section.4.3}
+\contentsline {chapter}{\numberline {5}Integration der Webframeworks in AEM}{54}{chapter.5}
+\contentsline {section}{\numberline {5.1}Testumgebung}{54}{section.5.1}
+\contentsline {section}{\numberline {5.2}Zu untersuchende Frameworks}{54}{section.5.2}
+\contentsline {section}{\numberline {5.3}Zu integrierende Webanwendungen}{54}{section.5.3}
+\contentsline {section}{\numberline {5.4}M\IeC {\"o}glichkeiten der Integration}{55}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Direkte Integration in das AEM}{55}{subsection.5.4.1}
+\contentsline {subsubsection}{\numberline {5.4.1.1}L\IeC {\"o}sungsansatz \glqq Clientlib\grqq }{55}{subsubsection.5.4.1.1}
+\contentsline {paragraph}{\numberline {5.4.1.1.1}Anpassen zur AJC}{56}{paragraph.5.4.1.1.1}
+\contentsline {paragraph}{\numberline {5.4.1.1.2}Bewertung}{57}{paragraph.5.4.1.1.2}
+\contentsline {subsubsection}{\numberline {5.4.1.2}L\IeC {\"o}sungsansatz \glqq Content Ordner\grqq }{57}{subsubsection.5.4.1.2}
+\contentsline {paragraph}{\numberline {5.4.1.2.1}Bewertung}{58}{paragraph.5.4.1.2.1}
+\contentsline {subsection}{\numberline {5.4.2}Integration \IeC {\"u}ber einen zus\IeC {\"a}tzlichen Webserver}{58}{subsection.5.4.2}
+\contentsline {subsubsection}{\numberline {5.4.2.1}L\IeC {\"o}sungsansatz \glqq Java-Servlet\grqq }{58}{subsubsection.5.4.2.1}
+\contentsline {paragraph}{\numberline {5.4.2.1.1}Erkl\IeC {\"a}rung}{59}{paragraph.5.4.2.1.1}
+\contentsline {paragraph}{\numberline {5.4.2.1.2}Anpassen des Webservers}{60}{paragraph.5.4.2.1.2}
+\contentsline {paragraph}{\numberline {5.4.2.1.3}\leavevmode {\color {red}Anpassen der Webanwendung}}{61}{paragraph.5.4.2.1.3}
+\contentsline {paragraph}{\numberline {5.4.2.1.4}Ablauf}{61}{paragraph.5.4.2.1.4}
+\contentsline {subparagraph}{\numberline {5.4.2.1.4.1}HTML-Seite aufbereiten}{62}{subparagraph.5.4.2.1.4.1}
+\contentsline {subparagraph}{\numberline {5.4.2.1.4.2}Ajax-Anfragen anpassen}{63}{subparagraph.5.4.2.1.4.2}
+\contentsline {paragraph}{\numberline {5.4.2.1.5}\leavevmode {\color {red}Aufbereitungsaufgabe bei unterschiedlichen Frameworks}}{64}{paragraph.5.4.2.1.5}
+\contentsline {paragraph}{\numberline {5.4.2.1.6}Bewertung}{64}{paragraph.5.4.2.1.6}
+\contentsline {subsubsection}{\numberline {5.4.2.2}L\IeC {\"o}sungsansatz \glqq JavaScript\grqq }{65}{subsubsection.5.4.2.2}
+\contentsline {paragraph}{\numberline {5.4.2.2.1}Synchronisation}{65}{paragraph.5.4.2.2.1}
+\contentsline {paragraph}{\numberline {5.4.2.2.2}Bewertung}{66}{paragraph.5.4.2.2.2}
+\contentsline {subsection}{\numberline {5.4.3}\leavevmode {\color {red}L\IeC {\"o}sungsansatz \glqq Proxy\grqq }}{66}{subsection.5.4.3}
+\contentsline {subsubsection}{\numberline {5.4.3.1}Erkl\IeC {\"a}rung}{67}{subsubsection.5.4.3.1}
+\contentsline {subsubsection}{\numberline {5.4.3.2}Bewertung}{68}{subsubsection.5.4.3.2}
+\contentsline {section}{\numberline {5.5}M\IeC {\"o}glichkeiten der Kombination}{68}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Clientlib und Content-Ordner}{68}{subsection.5.5.1}
+\contentsline {subsubsection}{\numberline {5.5.1.1}Bewertung}{69}{subsubsection.5.5.1.1}
+\contentsline {subsection}{\numberline {5.5.2}Proxy und Java}{69}{subsection.5.5.2}
+\contentsline {subsubsection}{\numberline {5.5.2.1}Bewertung}{70}{subsubsection.5.5.2.1}
+\contentsline {section}{\numberline {5.6}Weitere Werkzeuge und Vorgehensprozesse}{71}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Minimierung}{71}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.2}Konkatinierung und weitere Laufzeitoptimierung}{72}{subsection.5.6.2}
+\contentsline {subsection}{\numberline {5.6.3}\IeC {\"U}bertragen von Ressourcen}{73}{subsection.5.6.3}
+\contentsline {subsubsection}{\numberline {5.6.3.1}WebDAV}{73}{subsubsection.5.6.3.1}
+\contentsline {subsubsection}{\numberline {5.6.3.2}HTTP}{73}{subsubsection.5.6.3.2}
+\contentsline {subsubsection}{\numberline {5.6.3.3}CRX-Paket}{73}{subsubsection.5.6.3.3}
+\contentsline {section}{\numberline {5.7}Suchmaschinen}{74}{section.5.7}
+\contentsline {section}{\numberline {5.8}Bekannte Konflikte zwischen Skripten}{76}{section.5.8}
+\contentsline {section}{\numberline {5.9}\leavevmode {\color {red}Bewertung der L\IeC {\"o}sungen}}{76}{section.5.9}
+\contentsline {chapter}{\numberline {6}Zusammenfassung}{78}{chapter.6}
+\contentsline {section}{\numberline {6.1}Fazit}{78}{section.6.1}
+\contentsline {section}{\numberline {6.2}Ausblick}{79}{section.6.2}
+\contentsline {chapter}{Stichwortverzeichnis}{79}{section.6.2}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{80}{chapter*.15}

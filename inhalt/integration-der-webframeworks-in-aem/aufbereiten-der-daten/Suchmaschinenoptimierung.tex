@@ -1,0 +1,62 @@
+\section{Suchmaschinen}
+\label{sec:suchmaschinen}
+Falls die Webanwendung als \ac{spa} mit Hinzunahme der in \autoref{sec:pushState} beschriebenen pushState-Funktion entwickelt wurde, so ist eine entsprechende Konfiguration des \ac{aem}-Servers vonnöten, damit die Webseiten der Webanwendung korrekt aufgerufen werden.\\
+Als Beispiel soll eine AngularJS-Anwendung dienen, welche unter \filefolder{/content/angular/} liegt. Sie soll über \pseudourl{http://localhost:4502/spa/} zu erreichen sein. Somit sind alle App-Ressourcen der Webanwendung auch unter besagter \ac{url} erreichbar. \\
+Es wird angenommen, dass alle \ac{url}s, die einen Punkt besitzen, einer App-Ressource wie Skripte, Bilder etc. entsprechen. Ansonsten handelt es sich um eine Webseite innerhalb der \ac{spa}. Da eine \ac{spa} aus einer HTML-Seite, z. B. index.html, besteht, sollen alle Webseiten-Anfragen auf diese verweisen. Alle weiteren App-Ressourcen erhalten eine relative Umleitung. \autoref{tab:resolution} zeigt beispielhaft einige vom Browser angeforderte Web-Ressourcen und unter welchen JCR-Knoten diese zu finden sind. \\
+
+\begin{minipage}{\textwidth}
+	\begin{longtable}{|p{0.40\textwidth}|c|c|p{0.25\textwidth}|}
+		\hline  
+		Angeforderte \ac{url}s & Ressourcetyp & Hat Punkt & Ziel JCR-Knoten\\  \hhline{|=|=|=|=|}
+		
+		\pseudourl{http://localhost:4502/spa/} & Webseite & Nein & \pseudourl{/content/angular/index.html} \\ 
+		\hline
+		 
+		 \pseudourl{http://localhost:4502/spa/news/} & Webseite & Nein & \pseudourl{/content/angular/index.html} \\ 
+		 \hline
+		 
+		 \pseudourl{http://localhost:4502/spa/about/} & Webseite & Nein & \pseudourl{/content/angular/index.html} \\ 
+		 \hline
+		 
+		 \pseudourl{http://localhost:4502/spa/img/logo.png} & Bild & Ja & \pseudourl{/content/angular/img/logo.png} \\ 
+		 \hline
+		 
+		 \pseudourl{http://localhost:4502/ws/news/} & Webseite & Nein & Keine Weiterleitung, da Pfad nicht mit \filefolder{/spa} beginnt.\\ 
+		 \hline
+		 
+		 \pseudourl{http://localhost:4502/spa/ressources/style.css} & Stylesheet & Ja & \pseudourl{/content/angular/ressources/style.css} \\ 
+		 \hline
+		 
+		\caption{Beispiel für die interne Umleitung}\label{tab:resolution}
+	\end{longtable}
+\end{minipage}
+Hier kommt der Apache Sling Resource Resolver zum Einsatz \cite{Foundation2016}. Über das \ac{jcr} werden Regeln für die Umleitung der angeforderten \ac{url}s gesetzt. In der Standardkonfiguration befinden sich diese unter \filefolder{/http/map/}. Jede Regel setzt sich aus der hierarchischen Struktur und verschiedenen Eigenschaften zusammen. Um die anforderten \ac{url}s aus \autoref{tab:resolution} entsprechend umzuleiten, empfiehlt sich die Struktur wie in \autoref{lst:resolver}.
+
+\begin{lstlisting}[style=jcr,caption=Konfigurationsbeispiel für den Apache Sling Resource Resolver, label=lst:resolver]
+/etc/map/http/
++ localhost.4502/
+  - jcr:primaryType (Name) = sling:Mapping
+  + spa/
+    - jcr:primaryType (Name) = sling:Mapping
+    - sling:internalRedirect (String) = /content/angular
+    + path/
+      - jcr:primaryType (Name) = sling:Mapping
+      - sling:match (String) = ([^.]*)
+      - sling:internalRedirect (String) = /content/angular/index.html
+\end{lstlisting}
+
+Die Regeln basieren auf regulären Ausdrücken. Bei regulären Ausdrücken\index{Reguläre Ausdrücke} handelt es sich um eine Notation zur Beschreibung von Textmustern. Durch die Hinzunahme einer geeigneten Programmiersprache ist es möglich, Texte nach dem Textmuster zu durchsuchen und diese so zu erweitern, zu reduzieren und zu manipulieren \cite[S. 1 f.]{Friedl2009}. \\
+Der reguläre Ausdruck wird aus den Namen der Knoten bzw. deren Werten der Eigenschaft sling:match, falls ein Knoten diese besitzt, zusammengesetzt. Der Wert der Eigenschaft sling:internalRedirct steht für die Ziel-URL im \ac{jcr}. \\
+Aus der gegebenen Konfiguration resultieren zwei Regeln. Der Knoten \filefolder{/etc/map/http/localhost.4502/spa/path/} beschreibt, dass alle \ac{url}s, die mit \pseudourl{http://localhost:4502/spa/} beginnen, aber keinen Punkt in der \ac{url} haben, auf \filefolder{/content/angular/index.html} verweisen. Ansonsten gilt die erstellte Regel unter Knoten \filefolder{/etc/map/http/localhost.4502/spa/}.
+
+Wie die Auflösung verschiedener \ac{url}s geschehen würde, ist der \autoref{img:resolve} zu entnehmen.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{resolver.png}
+		\caption{Möglichkeit zum Auflösen von Anfragen unter AEM}
+		\label{img:resolve}
+	\end{center}
+\end{figure}
+
+Sollten die Ressourcen über einen Proxy geleitet werden, so ließen sich diese Regeln auch mit dem Modulen \quotes{mod\_rewrite} abbilden, sofern es sich bei dem Proxy um einen Apache HTTP-Server handelt.

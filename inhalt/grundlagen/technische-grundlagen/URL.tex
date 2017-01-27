@@ -1,7 +1,7 @@
 \subsection{URL}
-\label{sec:url}
-Eine \ac{url} identifiziert und lokalisiert eine Ressource. Im der Webtechnologie verweist eine \ac{url} auf eine Web-Ressource. \\
-Eine \ac{url} setzt sich aus verschiedenen Teilen, wie das verwendete Protokoll, den Port und die Domain zusammen. Eine \ac{url} kann hierbei wie folgend aussehen.
+\label{sec:url}\index{URL}
+Ein \acf{url} identifiziert und lokalisiert eine Ressource. In der Webtechnologie verweist eine \ac{url} auf eine Web-Ressource. \\
+Eine \ac{url} setzt sich aus verschiedenen Teilen, wie das verwendete Protokoll\index{Protokoll}, den Port\index{Port} und dem Hostname \index{Hostname} zusammen. Eine \ac{url} kann hierbei wie folgend aussehen.
 
 \begin{lstlisting}[style=jcr, caption=Eine URL, label=lst:url]
 http://www.example.com:3000/spa/index.html?page=news
@@ -9,14 +9,16 @@ http://www.example.com:3000/spa/index.html?page=news
 
 Die \ac{url} aus \autoref{lst:url} in \autoref{tab:url} erklärt.
 
-\begin{longtable}{|c|c|c|c|c|} 
+\begin{longtable}{|*6{c|}} 
 	
 	
 	\hline 
-	http & www.example.com & 3000 & spa/index.html & page=news\\ 
+	http & www & example.com & 3000 & spa/index.html & page=news\\ 
 	
 	\hline 
-	Schema/Protokoll & Domain & Port & Pfad & Parameter\\
+	 & Subdomain\index{Subdomain|see{Domain Subdomain}} & Domain\index{Domain} & & & \\
+	\hline 
+	Schema/Protokoll & \multicolumn{2}{c|}{Hostname} & Port & Pfad & Parameter\\
 	\hline
 	\caption{Aufbau einer URL}\label{tab:url}
 \end{longtable}

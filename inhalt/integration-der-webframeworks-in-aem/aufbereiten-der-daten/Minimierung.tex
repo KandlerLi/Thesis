@@ -1,20 +1,3 @@
 \subsection{Minimierung}
-Für den Produktiveinsatz ist es ratsam die Quelldateien zu minimieren und konkatenieren. Bei der Minimierung werden zum Beispiel unnötige Leerzeichen entfernt, oder auch lange Variablennamen durch kürzere ersetzt. Bei der Konkatenierung wird die Anzahl der einzelnen Dateien minimiert, indem diese zu einer großen Datei zusammen gefügt werden. Beides erhöht die Übertragungszeit vom Server zum Client, da weniger Anfragen gestellt werden müssen, und auch das zu übertragende Volumen sinkt. Weiterhin existieren so auch weniger Dateien, die es in das \ac{aem} zu integrieren gilt, was zum Beispiel die direkte Integration wie in \autoref{sec:direkte-integration-in-das-aem} beschrieben erleichtert. \\
-Weiterhin lassen sich bei manchen Frameworks die HTML-Templates in JavaScript-Dateien umwandeln. Somit ist auch hier eine anschließende Minimierung und Komprimierung möglich.
-
-
-\begin{description}
-	\item[Allgemein] Generell existieren für die Minimierung von JavaScript-Quellcode verschiedenste Werkzeuge. Eines davon wäre UglifyJS \cite{Bazon2016}. Hiermit lässt sich JavaScript-Quellcode unter anderem minimieren und konkatenieren. Das Werkzeug wird unter der BSD-Lizenz veröffentlicht und wird über \ac{npm} installiert. Bei der Konkatenierung ist darauf zu achten, die JavaScript-Dateien in der korrekten Reihenfolge anzugeben, um Fehler in der Abhängigkeit zu vermeiden. \\
-	Um solche Abhängigkeitsfehler zu vermeiden lässt sich hier das Konzept der \ac{di} nutzen. Wurde die Webanwendung unter Verwendung von \ac{di} entwickelt, so ist in den JavaScript-Datei bereits deren Abhängigkeit syntaktisch hinterlegt. Je nach Art der verwendeten \ac{di} darf der Entwickler auf unterschiedliche Werkzeuge zurückgreifen. Alle gängigen Bibliotheken aus \autoref{tab:dilist} liefern bereits Werkzeuge für die Konkatenierung mit.
-
-	\item[AngularJS] Alle AngularJS-Templates, welche sich im Normalfall in einer jeweils eigenen HTML-Datei befinden, lassen sich in eine eigene JavaScript-Datei packen. Als Werkzeug wird hier Grunt in Verbindung mit dem \ac{npm}-Packet Namens grunt-angular-template \cite{Clemmons2016} verwendet. Dies nimmt die AngularJS-Templates und wandelt diese in eine JavaScript-Datei um, welche den Template-Cache \cite{Google2016c} von AngularJS nutzt.
-	
-	\item[AngularJS2] In der Dokumentation von AngularJS2 wird der \ac{aot}-Ansatz erklärt \cite{Google2016a}. Im Gegensatz zum \ac{jit}-Ansatz, bei dem Skripte und App-Ressourcen erst dann geladen werden, wenn sie benötigt sind, wird hier alles, was später benötigt werden könnte, zum Anfang geladen.
-	
-	\item[Aurelia] Auch Aurelia bietet ein derartiges Tool an. Dieses nutzt Gulp und ist über \ac{npm} mit den Namen aurelia-bundler \cite{Aurelia2016} zu finden.
-	
-	\item[React] Um die Laufzeit der Webanwendung zu optimieren, kann man diesen zuvor in normale JavaScript-Anweisung umwandeln. Hierfür empfiehlt sich der Einsatz von Babel \cite{Babel2016}. Das Werkzeug wird über \ac{npm} installiert, kann TypeScript und neueres ECMAScript in ECMAscript 3 und 5 umwandelt, und beherrscht auch \ac{jsx}. Die Umwandlung lässt sich manuell, oder auch wahlweise durch Gulp und Grunt anstoßen.
-	
-	
-	
-\end{description}
+Für den Produktiveinsatz lassen sich die JavaScript-Ressourcen minimieren. Hierbei werden zum Beispiel unnötige Leerzeichen entfernt oder auch lange Variablennamen durch kürzere ersetzt. Dies minimiert die Übertragungszeit vom Server zum Client, da das zu übertragende Volumen sinkt.\\
+Generell existieren für die Minimierung von JavaScript-Quellcode verschiedenste Werkzeuge. Eines davon wäre UglifyJS \cite{Bazon2016}. Hiermit lässt sich JavaScript-Quellcode unter anderem minimieren. Das Werkzeug wird unter der BSD-Lizenz veröffentlicht und über \ac{npm} installiert.	

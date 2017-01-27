@@ -1,0 +1,5 @@
+\paragraph{Erklärung}
+
+In der Regel erfolgt das Laden einer Webanwendung genau wie bei einer Webseite, wie in \autoref{sec:http} beschrieben, in drei Schritten. Zunächst wird die HTML-Seite angefordert, anschließend wird der Quellcode der HTML-Seite nach weiteren App-Ressourcen durchsucht und auch diese werden geladen. Weitere App-Ressourcen werden nun über Ajax angefordert und vom Server retourniert. Es wird davon ausgegangen, dass diese Schritte unter \serverB korrekt durchlaufen werden und somit die Webanwendung wie gewünscht im Browser erscheint. \\
+Nun ist es Aufgabe der \ajc, die App-Ressourcen so aufzurufen und zu bearbeiten, dass die Webanwendung korrekt in einer Webseite des \ac{aem} dargestellt wird. Dafür müssen die HTML-Seite, die Ajax-Anfragen und ggf. auch weitere App-Ressourcen manipuliert werden. Die \ajc dient somit als Bindeglied zwischen \ac{aem} und dem Webserver.\\
+Zuvor muss jedoch der Webserver und die Webanwendung gewissen Anpassungen unterliegen. Diese werden in \autoref{sec:anpassen-des-webservers} und \autoref{sec:anpassen-der-webanwendung} beschrieben.

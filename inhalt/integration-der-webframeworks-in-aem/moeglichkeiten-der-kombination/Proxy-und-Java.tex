@@ -1,0 +1,36 @@
+\subsection{Proxy und Java}
+
+Der Lösungsansatz \quotes{Java-Servlet} hat den Nachteil, dass für jedes Webframework, oder gar für jede Webanwendung eine eigene \ajc benötigt wird. Denn je nach Art der Webanwendung muss die \ajc diese unterschiedlich vor der Integration bearbeiten.  \\
+Weiterhin vom Nachteil ist, dass die Webwendung über den Proxy für Besucher voll zugänglich ist. \\
+Um die jeweiligen Vorteile zu vereinen werden beide Lösungsansätze hier vereint. 
+\begin{figure}[H]
+	\begin{center}
+		\includesvg[width=.8\textwidth]{proxy+java}
+		\caption{Aufbau der Proxy und Java Kombination}
+		\label{img:proxyjava}
+	\end{center}
+\end{figure}
+
+Hierbei wird die Logik, welche für die Anpassung der Webanwendung benötigt wird, in den Proxy verschoben. Somit genügt eine \ac{aem}-Komponente, in welcher nur die Einstiegsseite der Webanwendung zu konfigurieren ist. Die Dateien \filefolder{AppBuilder.java}, \filefolder{GetData.java} und \filefolder{ajaxredirct.js} werden auch hier eingesetzt, dienen jedoch nur zum Auslösen der HTTP-Anfragen.\\
+Für jede Webanwendung lässt sich nun auf dem Server ein eigenes Proxy-Skript erstellen, welches sich z. B. bei Apache durch \quotes{mod\_rewrite} einem entsprechenden \ac{url}-Muster zuordnen lässt. \\
+Neben der Modularität und das nur eine \ac{aem}-Komponente Verwendung findet besteht die Kommunikation hier nur zwischen der \ajc und dem Webserver. Der Client kommuniziert nie direkt mit dem Proxy. Somit lässt sich der Webserver konfigurieren, dass nur der \ac{aem}-Server und ggf. einige Test-Nutzer auf diesen Zugriff haben. Allen anderen Nutzern wird der Zugriff verweigert.
+
+\subsubsection{Bewertung}
+
+Die Lösungskombination ist wie folgt zu bewerten.
+
+\begin{minipage}[t]{0.5\textwidth}
+	\textbf{Vorteile:}
+	\begin{itemize}
+		\item Nur eine \ac{aem}-Komponente.
+		\item Striktere Trennung. Alle, was die Webanwendung betrifft, auch die Logik der Integration, ist außerhalb von \ac{aem}.
+		\item Jeder Proxy kann in einer eigenen Skriptsprache erfolgen.
+		\item Ggf. weitere Logik in der AEM-Komponente möglich, wie z. B. eine zentrale Komprimierung der vom Proxy erhaltenen Ressourcen.
+	\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\textbf{Nachteile:}
+	\begin{itemize}
+		\item Externer Webserver wird benötigt.
+	\end{itemize}
+\end{minipage}
