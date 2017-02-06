@@ -20,19 +20,28 @@
 %\renewcommand*\includegraphics[2][]{}
 %\renewcommand*\includesvg[2][]{}
 
+%Seitenrahmen anzeigen
+%\usepackage{showframe}
+
 %\usepackage{helvet}
 %\renewcommand{\familydefault}{\sfdefault}
 
+\newif\ifprint
+\printfalse
 
+
+\ifprint
 \cfoot{}
 \hypersetup{colorlinks = false,pdfborder={0 0 0},}
+\fi
+
 
 \makeindex
 \begin{document}
 
-
+\ifprint\else
 \input{deckblatt}
-
+\fi
 \RedeclareSectionCommand[
 beforeskip=-1\baselineskip,
 afterskip=.5\baselineskip]{chapter}

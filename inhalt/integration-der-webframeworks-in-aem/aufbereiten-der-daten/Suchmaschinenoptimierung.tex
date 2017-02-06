@@ -4,10 +4,9 @@ Falls die Webanwendung als \ac{spa} mit Hinzunahme der in \autoref{sec:pushState
 Als Beispiel soll eine AngularJS-Anwendung dienen, welche unter \filefolder{/content/angular/} liegt. Sie soll über \pseudourl{http://localhost:4502/spa/} zu erreichen sein. Somit sind alle App-Ressourcen der Webanwendung auch unter besagter \ac{url} erreichbar. \\
 Es wird angenommen, dass alle \ac{url}s, die einen Punkt besitzen, einer App-Ressource wie Skripte, Bilder etc. entsprechen. Ansonsten handelt es sich um eine Webseite innerhalb der \ac{spa}. Da eine \ac{spa} aus einer HTML-Seite, z. B. index.html, besteht, sollen alle Webseiten-Anfragen auf diese verweisen. Alle weiteren App-Ressourcen erhalten eine relative Umleitung. \autoref{tab:resolution} zeigt beispielhaft einige vom Browser angeforderte Web-Ressourcen und unter welchen JCR-Knoten diese zu finden sind. \\
 
-\begin{minipage}{\textwidth}
-	\begin{longtable}{|p{0.40\textwidth}|c|c|p{0.25\textwidth}|}
+	\begin{longtable}{|p{0.30\textwidth}|c|c|p{0.25\textwidth}|}
 		\hline  
-		Angeforderte \ac{url}s & Ressourcetyp & Hat Punkt & Ziel JCR-Knoten\\  \hhline{|=|=|=|=|}
+		\thead{Angeforderte \ac{url}s} & \thead{Ressourcetyp} & \thead{Hat Punkt} & \thead{Ziel JCR-Knoten}\\  \hhline{|=|=|=|=|}
 		
 		\pseudourl{http://localhost:4502/spa/} & Webseite & Nein & \pseudourl{/content/angular/index.html} \\ 
 		\hline
@@ -29,7 +28,7 @@ Es wird angenommen, dass alle \ac{url}s, die einen Punkt besitzen, einer App-Res
 		 
 		\caption{Beispiel für die interne Umleitung}\label{tab:resolution}
 	\end{longtable}
-\end{minipage}
+
 Hier kommt der Apache Sling Resource Resolver zum Einsatz \cite{Foundation2016}. Über das \ac{jcr} werden Regeln für die Umleitung der angeforderten \ac{url}s gesetzt. In der Standardkonfiguration befinden sich diese unter \filefolder{/http/map/}. Jede Regel setzt sich aus der hierarchischen Struktur und verschiedenen Eigenschaften zusammen. Um die anforderten \ac{url}s aus \autoref{tab:resolution} entsprechend umzuleiten, empfiehlt sich die Struktur wie in \autoref{lst:resolver}.
 
 \begin{lstlisting}[style=jcr,caption=Konfigurationsbeispiel für den Apache Sling Resource Resolver, label=lst:resolver]

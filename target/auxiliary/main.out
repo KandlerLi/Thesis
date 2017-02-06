@@ -105,31 +105,30 @@
 \BOOKMARK [4][-]{paragraph.5.4.2.1.4}{Ablauf}{subsubsection.5.4.2.1}% 105
 \BOOKMARK [5][-]{subparagraph.5.4.2.1.4.1}{HTML-Seite aufbereiten}{paragraph.5.4.2.1.4}% 106
 \BOOKMARK [5][-]{subparagraph.5.4.2.1.4.2}{Ajax-Anfragen anpassen}{paragraph.5.4.2.1.4}% 107
-\BOOKMARK [4][-]{paragraph.5.4.2.1.5}{Aufbereitungsaufgabe bei unterschiedlichen Frameworks}{subsubsection.5.4.2.1}% 108
-\BOOKMARK [4][-]{paragraph.5.4.2.1.6}{Bewertung}{subsubsection.5.4.2.1}% 109
-\BOOKMARK [3][-]{subsubsection.5.4.2.2}{L\366sungsansatz \214JavaScript\215}{subsection.5.4.2}% 110
-\BOOKMARK [4][-]{paragraph.5.4.2.2.1}{Synchronisation}{subsubsection.5.4.2.2}% 111
-\BOOKMARK [4][-]{paragraph.5.4.2.2.2}{Bewertung}{subsubsection.5.4.2.2}% 112
-\BOOKMARK [2][-]{subsection.5.4.3}{L\366sungsansatz \214Proxy\215}{section.5.4}% 113
-\BOOKMARK [3][-]{subsubsection.5.4.3.1}{Erkl\344rung}{subsection.5.4.3}% 114
-\BOOKMARK [3][-]{subsubsection.5.4.3.2}{Bewertung}{subsection.5.4.3}% 115
-\BOOKMARK [1][-]{section.5.5}{M\366glichkeiten der Kombination}{chapter.5}% 116
-\BOOKMARK [2][-]{subsection.5.5.1}{Clientlib und Content-Ordner}{section.5.5}% 117
-\BOOKMARK [3][-]{subsubsection.5.5.1.1}{Bewertung}{subsection.5.5.1}% 118
-\BOOKMARK [2][-]{subsection.5.5.2}{Proxy und Java}{section.5.5}% 119
-\BOOKMARK [3][-]{subsubsection.5.5.2.1}{Bewertung}{subsection.5.5.2}% 120
-\BOOKMARK [1][-]{section.5.6}{Weitere Werkzeuge und Vorgehensprozesse}{chapter.5}% 121
-\BOOKMARK [2][-]{subsection.5.6.1}{Minimierung}{section.5.6}% 122
-\BOOKMARK [2][-]{subsection.5.6.2}{Konkatinierung und weitere Laufzeitoptimierung}{section.5.6}% 123
-\BOOKMARK [2][-]{subsection.5.6.3}{\334bertragen von Ressourcen}{section.5.6}% 124
-\BOOKMARK [3][-]{subsubsection.5.6.3.1}{WebDAV}{subsection.5.6.3}% 125
-\BOOKMARK [3][-]{subsubsection.5.6.3.2}{HTTP}{subsection.5.6.3}% 126
-\BOOKMARK [3][-]{subsubsection.5.6.3.3}{CRX-Paket}{subsection.5.6.3}% 127
-\BOOKMARK [1][-]{section.5.7}{Suchmaschinen}{chapter.5}% 128
-\BOOKMARK [1][-]{section.5.8}{Bekannte Konflikte zwischen Skripten}{chapter.5}% 129
-\BOOKMARK [1][-]{section.5.9}{Bewertung der L\366sungen}{chapter.5}% 130
-\BOOKMARK [0][-]{chapter.6}{Zusammenfassung}{}% 131
-\BOOKMARK [1][-]{section.6.1}{Fazit}{chapter.6}% 132
-\BOOKMARK [1][-]{section.6.2}{Ausblick}{chapter.6}% 133
-\BOOKMARK [0][-]{section.6.2}{Stichwortverzeichnis}{}% 134
-\BOOKMARK [0][-]{chapter*.15}{Literaturverzeichnis}{}% 135
+\BOOKMARK [4][-]{paragraph.5.4.2.1.5}{Bewertung}{subsubsection.5.4.2.1}% 108
+\BOOKMARK [3][-]{subsubsection.5.4.2.2}{L\366sungsansatz \214JavaScript\215}{subsection.5.4.2}% 109
+\BOOKMARK [4][-]{paragraph.5.4.2.2.1}{Synchronisation}{subsubsection.5.4.2.2}% 110
+\BOOKMARK [4][-]{paragraph.5.4.2.2.2}{Bewertung}{subsubsection.5.4.2.2}% 111
+\BOOKMARK [2][-]{subsection.5.4.3}{L\366sungsansatz \214Proxy\215}{section.5.4}% 112
+\BOOKMARK [3][-]{subsubsection.5.4.3.1}{Erkl\344rung}{subsection.5.4.3}% 113
+\BOOKMARK [3][-]{subsubsection.5.4.3.2}{Bewertung}{subsection.5.4.3}% 114
+\BOOKMARK [1][-]{section.5.5}{M\366glichkeiten der Kombination}{chapter.5}% 115
+\BOOKMARK [2][-]{subsection.5.5.1}{Clientlib und Content-Ordner}{section.5.5}% 116
+\BOOKMARK [3][-]{subsubsection.5.5.1.1}{Bewertung}{subsection.5.5.1}% 117
+\BOOKMARK [2][-]{subsection.5.5.2}{Proxy und Java}{section.5.5}% 118
+\BOOKMARK [3][-]{subsubsection.5.5.2.1}{Bewertung}{subsection.5.5.2}% 119
+\BOOKMARK [1][-]{section.5.6}{Weitere Werkzeuge und Vorgehensprozesse}{chapter.5}% 120
+\BOOKMARK [2][-]{subsection.5.6.1}{Minimierung}{section.5.6}% 121
+\BOOKMARK [2][-]{subsection.5.6.2}{Konkatinierung und weitere Laufzeitoptimierung}{section.5.6}% 122
+\BOOKMARK [2][-]{subsection.5.6.3}{\334bertragen von Ressourcen}{section.5.6}% 123
+\BOOKMARK [3][-]{subsubsection.5.6.3.1}{WebDAV}{subsection.5.6.3}% 124
+\BOOKMARK [3][-]{subsubsection.5.6.3.2}{HTTP}{subsection.5.6.3}% 125
+\BOOKMARK [3][-]{subsubsection.5.6.3.3}{CRX-Paket}{subsection.5.6.3}% 126
+\BOOKMARK [1][-]{section.5.7}{Suchmaschinen}{chapter.5}% 127
+\BOOKMARK [1][-]{section.5.8}{Bekannte Konflikte zwischen Skripten}{chapter.5}% 128
+\BOOKMARK [1][-]{section.5.9}{Bewertung der L\366sungen}{chapter.5}% 129
+\BOOKMARK [0][-]{chapter.6}{Zusammenfassung}{}% 130
+\BOOKMARK [1][-]{section.6.1}{Fazit}{chapter.6}% 131
+\BOOKMARK [1][-]{section.6.2}{Ausblick}{chapter.6}% 132
+\BOOKMARK [0][-]{section.6.2}{Stichwortverzeichnis}{}% 133
+\BOOKMARK [0][-]{chapter*.10}{Literaturverzeichnis}{}% 134

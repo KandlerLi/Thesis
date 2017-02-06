@@ -2,11 +2,11 @@
 \label{sec:server-webanwendung}
 
 Für die Entwicklung von Webanwendungen wurden verschiedene Lösungsansätze entworfen. Diese lassen sich in erster Linie in serverseitige und clientseitige Lösungen einteilen.  \\
-Bei serverseitigen Lösungen wird die Seite, abhängig von gewissen Parametern, vom Server zur Laufzeit generiert und an den Clienten gesendet. Als Beispiel soll ein Chatportal dienen. Dieses besteht aus einem Bereich für die Nachrichten, jeweils einem Feld für den Benutzernamen und die zu versendende Nachricht und einen Knopf zum Verschicken der Nachricht. Zur besseren Verdeutlichung dient \autoref{img:chat}.
+Bei serverseitigen Lösungen wird die Webseite, abhängig von gewissen Faktoren, vom Server zur Laufzeit generiert und an den Client gesendet. Als Beispiel soll ein Chatportal dienen. Dieses besteht aus einem Bereich für die Nachrichten, jeweils einem Feld für den Benutzernamen und die zu versendende Nachricht und einen Knopf zum Verschicken der Nachricht. Zur besseren Verdeutlichung dient \autoref{img:chat}.
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=.6\textwidth]{chat.png}
+		\includegraphics[width=.8\textwidth]{chat.png}
 		\caption{Ein einfaches Beispiel eines Onlinechats}
 		\label{img:chat}
 	\end{center}
@@ -28,7 +28,7 @@ Bei der ersten Anfrage erhält der Benutzer die Webseite und die letzten 50 Nach
 \subsubsection{Clientseitige Webanwendungen}
 \label{sec:client-webanwendung}
 
-Um die Menge der zu versendenden Daten zu dezimieren, lassen sich clientseitige Lösungen zum Erstellen von Webanwendungen einsetzen. Diese bauen zumeist auf den Einsatz von JavaScript und Ajax. Die Nachrichten werden via Ajax an einen Service versandt und neue Nachrichten, ebenfalls mit Ajax, vom Service abgefragt. Neue und eigene Nachrichten werden durch DOM-Manipulation integriert, siehe \autoref{img:webapp-client}. 
+Um die Menge der zu versendenden Daten zu dezimieren, lassen sich clientseitige Lösungen zum Erstellen von Webanwendungen einsetzen. Diese bauen zumeist auf den Einsatz von JavaScript, Ajax und \ac{dom}-Manipulation. Die Nachrichten werden via Ajax an einen Service versandt und neue Nachrichten, ebenfalls mit Ajax, vom Service abgefragt. Neue und eigene Nachrichten werden durch DOM-Manipulation integriert, siehe \autoref{img:webapp-client}. 
 
 \begin{figure}[H]
 	\begin{center}
@@ -39,6 +39,5 @@ Um die Menge der zu versendenden Daten zu dezimieren, lassen sich clientseitige 
 \end{figure}
 
 Ein Webservice\index{Webservice} ist hier ein Teil des Webservers, über den eine Maschine-zu-Maschine-Interaktion, typischerweise über HTTP, ermöglicht wird. Der Webservice besitzt eine vom Entwickler definierte Schnittstelle, über die der Austausch von Nachrichten ermöglicht wird.\\
-Sowohl auf der Server- als auch auf der Clientseite wird der Datenverkehr verringert. Von Nachteil ist jedoch, dass im Browser auch JavaScript aktiviert sein muss. Ist dies nicht der Fall, so würde die Webanwendung nicht funktionieren. \\
-\\
+Sowohl auf der Server- als auch auf der Clientseite wird so der Datenverkehr verringert. Von Nachteil ist jedoch, dass im Browser auch JavaScript aktiviert sein muss. Ist dies nicht der Fall, so würde die Webanwendung nicht funktionieren. \\
 Beide Ansätze lassen sich auch kombinieren. So könnte das Chatportal bei seiner ersten Anfrage die alten Nachrichten abrufen. Alle neuen Nachrichten werden anschließend über Ajax nachgeladen.

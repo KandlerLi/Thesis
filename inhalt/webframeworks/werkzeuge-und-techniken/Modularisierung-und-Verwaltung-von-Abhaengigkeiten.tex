@@ -2,7 +2,7 @@
 Nicht selten besitzt ein Codestück Abhängigkeiten zu anderen Programmcodes, damit dieses korrekt funktioniert. Dies sind zum Beispiel Bibliotheken, Frameworks oder Codestücke von anderen Entwicklern. Zu gewährleisten, dass alle diese Abhängigkeiten korrekt aufgelöst werden, mag bei kleinen Projekten noch ohne Weiteres vom Entwickler allein zu bewältigen sein. Hierfür muss er alle Skripte in der korrekten Reihenfolge in das HTML-Dokument einbinden. Sobald ein Projekt aber wächst und mehrere Entwickler daran beteiligt sind, steigt auch die Komplexität und somit auch die Herausforderung, besagte Abhängigkeiten aufzulösen. \\
 Lösungen hierfür sind Entwurfsmuster wie \ac{di}\index{DI}, \ac{ioc} \cite[S. 25 ff.]{GollDausmann2013} oder das Entwickeln gegen Schnittstellen, wie der \ac{amd} \cite[S. 266 ff.]{ste15}. Das Ziel ist dabei, den Code zu modularisieren, die Entkopplung von Abhängigkeiten und eine komponentenorientierte Entwicklung \cite[S. 261]{ste15}. Für die Zusammenführung der einzelnen Module haben sich gewisse Bibliotheken etabliert. Eine Zusammenfassung der derzeit bedeutendsten Bibliotheken und für welche Art von Modulen diese geeignet sind, ist \autoref{tab:dilist} zu entnehmen.
 
-\begin{minipage}{\textwidth}
+\newpage
 \begin{longtable}{|c|c|}
 	\hline  
 	\thead{Bibliothek} & \thead{Geeignet für}\\  \hhline{|=|=|}
@@ -15,9 +15,9 @@ Lösungen hierfür sind Entwurfsmuster wie \ac{di}\index{DI}, \ac{ioc} \cite[S. 
 	Webpack & CommonJS, \ac{amd}   \\ 
 	\hline 
 	
-	\caption{Möglichkeiten für Dependency Injection}\label{tab:dilist}
+	\caption{Möglichkeiten für Modularisierung}\label{tab:dilist}
 \end{longtable}
-\end{minipage}
+
 
 
 In jedem Modul wird deklariert, welche anderen Modulabhängigkeiten dieses besitzt. Die Syntax jener Deklaration ist von dem genutzten Entwurfsmuster bzw. der genutzten Schnittstelle abhängig. Die verwendete Bibliothek löst die Abhängigkeiten auf und übergibt den Modulen Instanzen ihrer benötigten Module. \\

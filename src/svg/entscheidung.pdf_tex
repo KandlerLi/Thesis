@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{610.4bp}%
+    \setlength{\unitlength}{607.2bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,53 +48,53 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.39449541)%
+  \begin{picture}(1,0.39262187)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{entscheidung.pdf}}%
-    \put(0.3774574,0.23984273){\makebox(0,0)[b]{\smash{Sollen die}}}%
-    \put(0.3774574,0.2214941){\makebox(0,0)[b]{\smash{App-Ressourcen}}}%
-    \put(0.3774574,0.20314548){\makebox(0,0)[b]{\smash{in das AEM?}}}%
+    \put(0.37549407,0.23847167){\makebox(0,0)[b]{\smash{Sollen die}}}%
+    \put(0.37549407,0.22002635){\makebox(0,0)[b]{\smash{App-Ressourcen}}}%
+    \put(0.37549407,0.20158103){\makebox(0,0)[b]{\smash{in das AEM?}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{entscheidung.pdf}}%
-    \put(0.14809961,0.17496723){\makebox(0,0)[b]{\smash{Soll die App }}}%
-    \put(0.14809961,0.15661861){\makebox(0,0)[b]{\smash{konfigurierbar sein?}}}%
+    \put(0.14492754,0.17325428){\makebox(0,0)[b]{\smash{Soll die App }}}%
+    \put(0.14492754,0.15480896){\makebox(0,0)[b]{\smash{konfigurierbar sein?}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{entscheidung.pdf}}%
-    \put(0.6068152,0.17496723){\makebox(0,0)[b]{\smash{Soll die Integration}}}%
-    \put(0.6068152,0.15661861){\makebox(0,0)[b]{\smash{mit Java erfolgen?}}}%
+    \put(0.60606061,0.17325428){\makebox(0,0)[b]{\smash{Soll die Integration}}}%
+    \put(0.60606061,0.15480896){\makebox(0,0)[b]{\smash{mit Java erfolgen?}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{entscheidung.pdf}}%
-    \put(0.10878113,0.04849279){\makebox(0,0)[b]{\smash{Clientlib}}}%
-    \put(0.10878113,0.03014417){\makebox(0,0)[b]{\smash{ Abschnitt \ref{sec:sol_clientlib}}}}%
+    \put(0.10540184,0.04611331){\makebox(0,0)[b]{\smash{Clientlib}}}%
+    \put(0.10540184,0.02766798){\makebox(0,0)[b]{\smash{ Abschnitt \ref{sec:sol_clientlib}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{entscheidung.pdf}}%
-    \put(0.30537353,0.04849279){\makebox(0,0)[b]{\smash{Content-Ordner}}}%
-    \put(0.30537353,0.03014417){\makebox(0,0)[b]{\smash{Abschnitt \ref{sec:sol_content}}}}%
+    \put(0.3030303,0.04611331){\makebox(0,0)[b]{\smash{Content-Ordner}}}%
+    \put(0.3030303,0.02766798){\makebox(0,0)[b]{\smash{Abschnitt \ref{sec:sol_content}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=6]{entscheidung.pdf}}%
-    \put(0.50196592,0.04849279){\makebox(0,0)[b]{\smash{Java-Servlet}}}%
-    \put(0.50196592,0.03014417){\makebox(0,0)[b]{\smash{Abschnitt \ref{sec:ansatz-java}}}}%
+    \put(0.50065876,0.04611331){\makebox(0,0)[b]{\smash{Java-Servlet}}}%
+    \put(0.50065876,0.02766798){\makebox(0,0)[b]{\smash{Abschnitt \ref{sec:ansatz-java}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=7]{entscheidung.pdf}}%
-    \put(0.69855832,0.04849279){\makebox(0,0)[b]{\smash{JavaScript}}}%
-    \put(0.69855832,0.03014417){\makebox(0,0)[b]{\smash{Abschnitt \ref{sec:ansatz-javascript}}}}%
+    \put(0.69828722,0.04611331){\makebox(0,0)[b]{\smash{JavaScript}}}%
+    \put(0.69828722,0.02766798){\makebox(0,0)[b]{\smash{Abschnitt \ref{sec:ansatz-javascript}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=8]{entscheidung.pdf}}%
-    \put(0.28806028,0.18432503){\makebox(0,0)[b]{\smash{Ja}}}%
+    \put(0.28530962,0.1830303){\makebox(0,0)[b]{\smash{Ja}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=9]{entscheidung.pdf}}%
-    \put(0.48368281,0.20251639){\makebox(0,0)[b]{\smash{Nein}}}%
+    \put(0.4828722,0.20064558){\makebox(0,0)[b]{\smash{Nein}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=10]{entscheidung.pdf}}%
-    \put(0.14195281,0.10117955){\makebox(0,0)[b]{\smash{Ja}}}%
+    \put(0.13913043,0.09964428){\makebox(0,0)[b]{\smash{Ja}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=11]{entscheidung.pdf}}%
-    \put(0.22132372,0.105557){\makebox(0,0)[b]{\smash{Nein}}}%
+    \put(0.21913044,0.10309618){\makebox(0,0)[b]{\smash{Nein}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=12]{entscheidung.pdf}}%
-    \put(0.55418086,0.10217563){\makebox(0,0)[b]{\smash{Ja}}}%
+    \put(0.55279316,0.09934123){\makebox(0,0)[b]{\smash{Ja}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=13]{entscheidung.pdf}}%
-    \put(0.65254261,0.1023198){\makebox(0,0)[b]{\smash{Nein}}}%
+    \put(0.65246377,0.09976285){\makebox(0,0)[b]{\smash{Nein}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=14]{entscheidung.pdf}}%
-    \put(0.89842726,0.04849279){\makebox(0,0)[b]{\smash{Proxy}}}%
-    \put(0.89842726,0.03014417){\makebox(0,0)[b]{\smash{Abschnitt \ref{sec:sol_proxy}}}}%
+    \put(0.89920949,0.04611331){\makebox(0,0)[b]{\smash{Proxy}}}%
+    \put(0.89920949,0.02766798){\makebox(0,0)[b]{\smash{Abschnitt \ref{sec:sol_proxy}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=15]{entscheidung.pdf}}%
-    \put(0.59108781,0.34076016){\makebox(0,0)[b]{\smash{Integration}}}%
-    \put(0.59108781,0.32241153){\makebox(0,0)[b]{\smash{steuerbar}}}%
-    \put(0.59108781,0.30406291){\makebox(0,0)[b]{\smash{über zentrales}}}%
-    \put(0.59108781,0.28571429){\makebox(0,0)[b]{\smash{Skript?}}}%
+    \put(0.59025033,0.33992095){\makebox(0,0)[b]{\smash{Integration}}}%
+    \put(0.59025033,0.32147563){\makebox(0,0)[b]{\smash{außerhalb von}}}%
+    \put(0.59025033,0.3030303){\makebox(0,0)[b]{\smash{AEM}}}%
+    \put(0.59025033,0.28458498){\makebox(0,0)[b]{\smash{steuerbar?}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=16]{entscheidung.pdf}}%
-    \put(0.4893578,0.26973787){\makebox(0,0)[b]{\smash{Ja}}}%
+    \put(0.48864296,0.26868248){\makebox(0,0)[b]{\smash{Nein}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=17]{entscheidung.pdf}}%
-    \put(0.67917434,0.23634338){\makebox(0,0)[b]{\smash{Nein}}}%
+    \put(0.67880108,0.23501976){\makebox(0,0)[b]{\smash{Ja}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=18]{entscheidung.pdf}}%
   \end{picture}%
 \endgroup%

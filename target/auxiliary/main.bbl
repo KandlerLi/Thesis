@@ -131,7 +131,8 @@
 \bibitem[Fou17a]{Foundation2017b}
 \textsc{Foundation}, Apache~S.:
 \newblock \emph{Apache Jackrabbit - Node Type Notation}.
-\newblock jan 2017
+\newblock \url{http://jackrabbit.apache.org/jcr/node-type-notation.html}.
+\newblock \,Version:\,jan 2017
 
 \bibitem[Fou17b]{Foundation2017}
 \textsc{Foundation}, The Apache~S.:

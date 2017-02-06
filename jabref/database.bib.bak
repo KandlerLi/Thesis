@@ -598,7 +598,7 @@
   year   = {2017},
 }
 
-@Misc{,
+@Misc{Incorporated2017,
   author = {Adobe Systems Incorporated},
   title  = {How to Build AEM Projects using Apache Maven},
   month  = {jan},

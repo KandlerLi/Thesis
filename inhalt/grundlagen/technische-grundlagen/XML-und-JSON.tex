@@ -1,5 +1,5 @@
 \subsection{XML und JSON}
-Bei der \ac{xml}\index{XML} handelt es sich um eine Notation, um Daten hierarchisch und strukturiert in einer Textdatei und in einem für den Menschen lesbaren Format darzustellen \cite[S. 34]{seb10}. Als Beispiel soll eine kurze Datenbank für Musikstücke im \autoref{lst:xml} dienen. Diese besteht aus vier Musikstücken mit jeweils einer ID, einem Titel und einem Preis.
+Bei der \ac{xml}\index{XML} handelt es sich um eine Notation, um Daten hierarchisch und strukturiert als Textdatei in einem für den Menschen lesbaren Format darzustellen \cite[S. 34]{seb10}. Als Beispiel soll eine kurze Datenbank für Musikstücke im \autoref{lst:xml} dienen. Diese besteht aus vier Musikstücken mit jeweils einer ID, einem Titel und einem Preis.
 \begin{lstlisting}[style=xml, caption=Ein XML-Beispiel, label=lst:xml]
 <?xml version="1.0" encoding="UTF-8" ?>
 <songs>
@@ -26,7 +26,7 @@ Bei der \ac{xml}\index{XML} handelt es sich um eine Notation, um Daten hierarchi
 </songs>
 \end{lstlisting}
 
-Ein anderes, ebenfalls verwendetes Übertragungsformat bei Ajax ist \ac{json}\index{JSON}. Diese ist im Gegensatz zu XML kompakter und lässt sich direkt in JavaScript umwandeln \cite[S. 658]{rie09}. So könnte die Musikdatenbank hier wie in \autoref{lst:json} aussehen.
+Ein andere Format ist \ac{json}\index{JSON}. Diese ist im Gegensatz zu XML kompakter und lässt sich direkt in JavaScript umwandeln \cite[S. 658]{rie09}, was gerade in Kombination mit Ajax oft Verwendung findet. So könnte die Musikdatenbank hier wie in \autoref{lst:json} aussehen.
 
 \begin{lstlisting}[style=htmlcssjs, caption=JSON für eine einfache Musikdatenbank, label=lst:json]
 [
@@ -37,4 +37,4 @@ Ein anderes, ebenfalls verwendetes Übertragungsformat bei Ajax ist \ac{json}\in
 ]
 \end{lstlisting}
 
-Zu beachten ist, dass \autoref{lst:json} keine 1:1-Umsetzung von \autoref{lst:xml} darstellt, sondern einen etwas anders hierarchischen Aufbau verwendet. Zudem geht die Information, dass es sich um Songs handelt, verloren. Die damit darstellbaren Daten sind jedoch identisch.
+Zu beachten ist, dass \autoref{lst:json} keine 1:1-Umsetzung von \autoref{lst:xml} darstellt, sondern einen etwas anders hierarchischen Aufbau verwendet. Zudem geht die Information vom Tag-Namen, dass es sich um Songs handelt, verloren. Die damit darstellbaren Daten sind jedoch identisch.

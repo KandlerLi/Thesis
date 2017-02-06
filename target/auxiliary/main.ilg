@@ -1,0 +1,6 @@
+This is makeindex, version 2.15 [MiKTeX 2.9.6100 64-bit] (kpathsea + Thai support).
+Scanning input file ./target/auxiliary/main.idx....done (106 entries accepted, 0 rejected).
+Sorting entries....done (730 comparisons).
+Generating output file ./target/auxiliary/main.ind....done (161 lines written, 0 warnings).
+Output written in ./target/auxiliary/main.ind.
+Transcript written in ./target/auxiliary/main.ilg.

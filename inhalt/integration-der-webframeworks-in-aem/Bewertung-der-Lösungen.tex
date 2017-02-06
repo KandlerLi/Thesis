@@ -1,5 +1,5 @@
-\sectiontbd{Bewertung der Lösungen}
-In den vorherigen Abschnitten wurden verschiedene Lösungsansätze erarbeitet. Nachfolgende \autoref{img:entscheidung} dient als kleine Hilfe, welche Lösung für eine vorstehende Integration am geeignetsten wäre. \\
+\section{Bewertung der Lösungen}
+In den vorherigen Abschnitten wurden verschiedene Lösungsansätze erarbeitet. Nachfolgende \autoref{img:entscheidung} dient als kleine Entscheidungshilfe, welche Lösung für eine vorstehende Integration am geeignetsten wäre. \\
 \begin{figure}[H]
 	\begin{center}
 		{\footnotesize\includesvg[width=1\textwidth]{entscheidung}}
@@ -7,16 +7,73 @@ In den vorherigen Abschnitten wurden verschiedene Lösungsansätze erarbeitet. N
 		\label{img:entscheidung}
 	\end{center}
 \end{figure}
-\missingall
 
+Des Weiteren soll folgende \autoref{tab:vergleich_loesungen}  jeweils in einem Satz zusammenfassen, welcher Lösungsansatz bzw. welche Kombination aus Lösungsansätzen in welchen Situationen geeignet bzw. ungeeignet ist.
 
-Folgende \autoref{tab:erfuellung} listet erneut die Kürzel der in \autoref{sec:anforderungen} gestellten Anforderung und vergleicht, in welchem Kapitel dieser Arbeit diese erfüllt bzw. gelöst wurden.
+\begin{longtable}{|p{0.2\textwidth}|p{0.35\textwidth}|p{0.35\textwidth}|} 
+	\hline 
+	\thead{Lösungsansatz} & \thead{Gut wenn \dots} & \thead{Schlecht wenn \dots}\\ 
+	\hhline{|=|=|=|}
+	
+	Clientlib
+	&
+	\dots es eine kleine Webanwendungen mit fast ausschließlich JavaScript und CSS ist.
+	&
+	\dots es sich um eine komplexe \ac{spa} handelt oder der AoT-Ansatz Verwendung findet.
+	\\\hline 
+	
+	Content-Ordner
+	& 
+	\dots die Webanwendung eine komplette Webseite darstellt.
+	&
+	\dots als \ac{aem}-Komponente benötigt wird.
+	\\\hline
+	
+	Java-Servlet
+	& 
+	\dots Webanwendung auf externen Server liegt.
+	&
+	\dots Viele unterschiedliche Webanwendung zu integrieren sind.
+	\\\hline
+	
+	JavaScript
+	&
+	\dots hauptsächlich clientseitige Techniken für die Umsetzung gewünscht sind.
+	&
+	\dots externer Webserver nicht allen Anfragen einen entsprechenden Header hinzufügt (CORS).
+	\\\hline
+	
+	Proxy
+	&
+	\dots Logik für Integration außerhalb von \ac{aem} und nicht zwingend mit Java bzw. JavaScript erfolgen soll.
+	&
+	\dots direkter Zugriff für Besucher verboten sein soll.
+	\\\hline
+	
+	Clientlib + Content
+	&
+	\dots es eine kleine Webanwendungen mit weiteren App-Ressourcen ist.
+	&
+	\dots die Webanwendung auf mehreren Webseiten verwendet wird.
+	\\\hline
+	
+	Proxy + Java
+	&
+	\dots der Proxy für den Besucher verborgen werden soll.
+	&
+	\dots es sich um eine kleine Webanwendung handelt und viel Konfiguration vermieden werden soll. 
+	\\\hline
+	
+	\caption{Kurzzusammenfassung der Lösungsansätze}\label{tab:vergleich_loesungen}
+\end{longtable}
+
+Die \autoref{tab:erfuellung} listet erneut die Kürzel der in \autoref{sec:anforderungen} gestellten Anforderung und vergleicht, in welchem Kapitel dieser Arbeit diese erfüllt bzw. gelöst wurden.
 
 \begin{longtable}{| c | c|} 
 	\hline 
 	\thead{Anforderung} & \thead{Gelöst in Kapitel} \\ 
 	
-	\hline 
+	\hhline{|=|=|}
 	A1 &  \ref{sec:integrationen} \\ 
 	\hline
 	A2 &  \ref{sec:integrationen} \\  
@@ -37,9 +94,13 @@ Folgende \autoref{tab:erfuellung} listet erneut die Kürzel der in \autoref{sec:
 	\hline
 	A7 &  \ref{sec:suchmaschinen} \\   
 	\hline
-	A8 &  \ref{sec:proxy}\\ 
+	A8 &  \ref{sec:sol_proxy}\\ 
 	\hline 
 	A9 & \ref{sec:konflikte}\\
 	\hline
+	A10 & \ref{sec:integrationen}\\
+	\hline
 	\caption{Anforderungserfüllung}\label{tab:erfuellung}
 \end{longtable}
+
+Der Punkt A3 \quotes{Die AJC soll sich über die Autoren-Bedienoberfläche, sofern erforderlich, konfigurieren lassen.} ließ sich nicht erfüllen. Zwar ist eine Konfiguration einer \ajc und somit auch einer Webanwendung generell möglich, es konnte aber innerhalb dieser Arbeit nicht weiter darauf eingegangen werden.

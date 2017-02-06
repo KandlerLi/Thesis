@@ -2,7 +2,9 @@
 \label{sec:html-seite-aufbereiten}
 Der erste Schritt dient dazu, die Einstiegsseite der Webanwendung anzufordern. \\
 Der Benutzer fordert hierbei zunächst die Webseite \serverA an. In dieser befindet sich die \ajc, an deren Stelle die Webanwendung von \serverB erscheinen soll.\\
-Nun wird im ersten Schritt \filefolder{AppBuilder.java} damit beauftragt, den HTML-Quellcode von \serverB anzufordern. \filefolder{AppBuilder.java} muss jetzt den erhaltenen HTML-Quellcode für die Integration aufbereiten. Einige dieser Aufbereitungsaufgaben sind anwendungsspezifisch und vom jeweils verwendeten Webframework abhängig. Mehr zu den Unterschieden ist dem \autoref{sec:aufbereitungsaufgabe} zu entnehmen. Was immer geschieht, ist, dass relative Referenzen auf JavaScript und CSS-Dateien durch absolute ersetzt werden. Eine Referenz auf \pseudourl{./app.module.js} sollte nach besagtem Schritt auf \serverB[app.module.js] verweisen.\\
+Nun wird im ersten Schritt \filefolder{AppBuilder.java} damit beauftragt, den HTML-Quellcode von \serverB anzufordern. \filefolder{AppBuilder.java} muss jetzt den erhaltenen HTML-Quellcode für die Integration aufbereiten. Einige dieser Aufbereitungsaufgaben sind anwendungsspezifisch und vom jeweils verwendeten Webframework abhängig.
+%Mehr zu den Unterschieden ist dem \autoref{sec:aufbereitungsaufgabe} zu entnehmen.
+Was immer geschieht, ist, dass relative Referenzen auf JavaScript und CSS-Dateien durch absolute ersetzt werden. Eine Referenz auf \pseudourl{./app.module.js} sollte nach besagtem Schritt auf \serverB[app.module.js] verweisen.\\
 Der Quellcode von \serverB[index.html] könnte wie in \autoref{lst:serverB} aussehen.
 
 \begin{lstlisting}[style=htmlcssjs, caption=Ausgangssituation auf Server B, label=lst:serverB]
